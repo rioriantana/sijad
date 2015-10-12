@@ -5,14 +5,18 @@ class Dosen {
 	String nama
 	String golongan
 	String jabatan
+	String role
+	String password
     static constraints = {
     	nidn(nullable:true)
 		nama(nullable:true)
 		golongan(nullable:true)
 		jabatan(nullable:true)
+		role(nullable:true, inList: ['ADMIN', 'DOSEN', 'KAPRODI'])
+		password(nullable:false)
     }
 
-    String toString(){
+	public String toString(){
     	"$nama"
     }
 }

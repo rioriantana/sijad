@@ -32,6 +32,10 @@
 					
 						<g:sortableColumn property="jabatan" title="${message(code: 'dosen.jabatan.label', default: 'Jabatan')}" />
 					
+						<g:sortableColumn property="role" title="${message(code: 'dosen.role.label', default: 'Role')}" />
+					
+						<g:sortableColumn property="password" title="${message(code: 'dosen.password.label', default: 'Password')}" />
+					
 					</tr>
 				</thead>
 				<tbody>
@@ -45,6 +49,10 @@
 						<td>${fieldValue(bean: dosenInstance, field: "golongan")}</td>
 					
 						<td>${fieldValue(bean: dosenInstance, field: "jabatan")}</td>
+					
+						<td>${fieldValue(bean: dosenInstance, field: "role")}</td>
+					
+						<td>${fieldValue(bean: dosenInstance, field: "password")}</td>
 					
 					</tr>
 				</g:each>

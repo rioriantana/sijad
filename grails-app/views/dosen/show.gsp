@@ -59,6 +59,24 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${dosenInstance?.role}">
+				<li class="fieldcontain">
+					<span id="role-label" class="property-label"><g:message code="dosen.role.label" default="Role" /></span>
+					
+						<span class="property-value" aria-labelledby="role-label"><g:fieldValue bean="${dosenInstance}" field="role"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${dosenInstance?.password}">
+				<li class="fieldcontain">
+					<span id="password-label" class="property-label"><g:message code="dosen.password.label" default="Password" /></span>
+					
+						<span class="property-value" aria-labelledby="password-label"><g:fieldValue bean="${dosenInstance}" field="password"/></span>
+					
+				</li>
+				</g:if>
+			
 			</ol>
 			<g:form url="[resource:dosenInstance, action:'delete']" method="DELETE">
 				<fieldset class="buttons">

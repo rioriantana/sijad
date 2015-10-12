@@ -38,3 +38,21 @@
 
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: dosenInstance, field: 'role', 'error')} ">
+	<label for="role">
+		<g:message code="dosen.role.label" default="Role" />
+		
+	</label>
+	<g:select name="role" from="${dosenInstance.constraints.role.inList}" value="${dosenInstance?.role}" valueMessagePrefix="dosen.role" noSelection="['': '']"/>
+
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: dosenInstance, field: 'password', 'error')} required">
+	<label for="password">
+		<g:message code="dosen.password.label" default="Password" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="password" required="" value="${dosenInstance?.password}"/>
+
+</div>
+
