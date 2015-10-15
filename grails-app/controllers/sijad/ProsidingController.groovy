@@ -12,7 +12,9 @@ class ProsidingController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond Prosiding.list(params), model:[prosidingInstanceCount: Prosiding.count()]
+        def prosidingInstance = Prosiding.findAllByTagDosen1OrTagDosen2OrTagDosen3(session.user, session.user, session.user, params)
+        def prosidingInstanceCount = Prosiding.countByTagDosen1OrTagDosen2OrTagDosen3(session.user, session.user, session.user, params)
+        [prosidingInstanceList: prosidingInstance, prosidingInstanceCount: prosidingInstanceCount]
     }
 
     def show(Prosiding prosidingInstance) {

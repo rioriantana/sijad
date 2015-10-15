@@ -11,7 +11,7 @@ class Dosen {
     	nidn(nullable:true)
 		nama(nullable:true)
 		golongan(nullable:true)
-		jabatan(nullable:true)
+		jabatan(nullable:true, inList: ['Asisten Ahli', 'Lektor', 'Lektor Kepala', 'Guru Besar'])
 		role(nullable:true, inList: ['ADMIN', 'DOSEN', 'KAPRODI'])
 		password(nullable:false)
     }

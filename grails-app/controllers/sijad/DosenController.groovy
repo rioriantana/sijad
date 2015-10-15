@@ -18,7 +18,10 @@ class DosenController {
     def show(Dosen dosenInstance) {
         respond dosenInstance
     }
-
+    def dosen(){
+      
+        print session.user.id
+    }
     def create() {
         respond new Dosen(params)
     }

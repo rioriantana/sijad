@@ -34,7 +34,7 @@
 		<g:message code="dosen.jabatan.label" default="Jabatan" />
 		
 	</label>
-	<g:textField name="jabatan" value="${dosenInstance?.jabatan}"/>
+	<g:select name="jabatan" from="${dosenInstance.constraints.jabatan.inList}" value="${dosenInstance?.jabatan}" valueMessagePrefix="dosen.jabatan" noSelection="['': '']"/>
 
 </div>
 

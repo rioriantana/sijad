@@ -12,7 +12,9 @@ class PenelitianController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond Penelitian.list(params), model:[penelitianInstanceCount: Penelitian.count()]
+        def penelitianInstance = Penelitian.findAllByTagDosen1OrTagDosen2OrTagDosen3(session.user, session.user, session.user, params)
+        def penelitianInstanceCount = Penelitian.countByTagDosen1OrTagDosen2OrTagDosen3(session.user, session.user, session.user, params)
+        [penelitianInstanceList: penelitianInstance, penelitianInstanceCount: penelitianInstanceCount]
     }
 
     def show(Penelitian penelitianInstance) {

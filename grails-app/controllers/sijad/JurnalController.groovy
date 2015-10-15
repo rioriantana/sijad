@@ -12,7 +12,9 @@ class JurnalController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond Jurnal.list(params), model:[jurnalInstanceCount: Jurnal.count()]
+        def jurnalInstance = Jurnal.findAllByTagDosen1OrTagDosen2OrTagDosen3(session.user, session.user, session.user, params)
+        def jurnalInstanceCount = Jurnal.countByTagDosen1OrTagDosen2OrTagDosen3(session.user, session.user, session.user, params)
+        [jurnalInstanceList: jurnalInstance, jurnalInstanceCount: jurnalInstanceCount]
     }
 
     def show(Jurnal jurnalInstance) {

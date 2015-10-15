@@ -2,6 +2,11 @@ package sijad
 
 class UserController {
 
+	def index(){
+		
+		redirect(action:'login')
+	}
+	
     def login() { 
 			if(session.user) {
 					redirect(controller:'jurnal')
@@ -14,7 +19,7 @@ class UserController {
 			
 		def user = Dosen.findWhere(nidn:params['nidn'], password:params['password'])
 		if (user) {
-			session.user = user
+			session.user = user.id
 			redirect(controller:'jurnal')
 		} else
 			redirect(controller:'user',action:'login')

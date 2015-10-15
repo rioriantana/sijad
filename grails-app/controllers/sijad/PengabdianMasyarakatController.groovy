@@ -12,7 +12,9 @@ class PengabdianMasyarakatController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond PengabdianMasyarakat.list(params), model:[pengabdianMasyarakatInstanceCount: PengabdianMasyarakat.count()]
+        def pengabdianMasyarakatInstance = PengabdianMasyarakat.findAllByTagDosen1OrTagDosen2OrTagDosen3(session.user, session.user, session.user, params)
+        def pengabdianMasyarakatInstanceCount = PengabdianMasyarakat.countByTagDosen1OrTagDosen2OrTagDosen3(session.user, session.user, session.user, params)
+        [pengabdianMasyarakatInstanceList: pengabdianMasyarakatInstance, pengabdianMasyarakatInstanceCount: pengabdianMasyarakatInstanceCount]
     }
 
     def show(PengabdianMasyarakat pengabdianMasyarakatInstance) {
