@@ -12,8 +12,9 @@ class PenelitianController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        def penelitianInstance = Penelitian.findAllByTagDosen1OrTagDosen2OrTagDosen3(session.user, session.user, session.user, params)
-        def penelitianInstanceCount = Penelitian.countByTagDosen1OrTagDosen2OrTagDosen3(session.user, session.user, session.user, params)
+        def dosen = Dosen.get(session.user)
+        def penelitianInstance = Penelitian.findAllByTagDosen1OrTagDosen2OrTagDosen3(dosen, dosen, dosen, params)
+        def penelitianInstanceCount = Penelitian.countByTagDosen1OrTagDosen2OrTagDosen3(dosen, dosen, dosen, params)
         [penelitianInstanceList: penelitianInstance, penelitianInstanceCount: penelitianInstanceCount]
     }
 
@@ -63,7 +64,8 @@ class PenelitianController {
             respond penelitianInstance.errors, view:'edit'
             return
         }
-
+        def dosen = Dosen.get(session.user)
+        penelitianInstance.tagDosen1 = dosen
         penelitianInstance.save flush:true
 
         request.withFormat {

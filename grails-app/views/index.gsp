@@ -104,18 +104,17 @@
 			</ul>
 		</div>
 		<div id="page-body" role="main">
-			<h1>Welcome to Grails</h1>
-			<p>Congratulations, you have successfully started your first Grails application! At the moment
-			   this is the default page, feel free to modify it to either redirect to a controller or display whatever
-			   content you may choose. Below is a list of controllers that are currently deployed in this application,
-			   click on each to execute its default action:</p>
+			<h1>Welcome to Si JAD</h1>
+			<p>Si Jad adalah Sistem Informasi Kinerja Dosen Fisika yang bertujuan untuk memonitoring kinerja dosen Program Studi Fisika FMIPA UNS. Si Jad dibuat untuk meningkatkan kinerja antar dosen baik di dalam UNS maupun di luar UNS. Si Jad berisi tentang pencapaian yang sudah dilaksanakan oleh Dosen Fisika FMIPA UNS dari tahun ke tahun.</p>
 
 			<div id="controller-list" role="navigation">
-				<h2>Available Controllers:</h2>
+				<h2>Informasi mengenai prestasi anda :</h2>
 				<ul>
-					<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
-						<li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
-					</g:each>
+						<li><g:link class="create" controller="jurnal">Jurnal</g:link></li>
+						<li><g:link class="create" controller="prosiding">Prosiding</g:link></li>
+						<li><g:link class="create" controller="penelitian">Penelitian</g:link></li>
+						<li><g:link class="create" controller="pengabdianMasyarakat">Pengabdian Masyarakat</g:link></li>
+						<li><g:link class="create" controller="user" action="logout">Logout</g:link></li>
 				</ul>
 			</div>
 		</div>

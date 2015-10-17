@@ -31,6 +31,6 @@ class UserController {
 	}
 
 	def profile() {
-		[petugasInstance: Dosen.get(session.user.id)]
+		[dosenInstance: Dosen.get(session.user.id)]
 	}
 }

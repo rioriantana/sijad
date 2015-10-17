@@ -12,8 +12,9 @@ class JurnalController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        def jurnalInstance = Jurnal.findAllByTagDosen1OrTagDosen2OrTagDosen3(session.user, session.user, session.user, params)
-        def jurnalInstanceCount = Jurnal.countByTagDosen1OrTagDosen2OrTagDosen3(session.user, session.user, session.user, params)
+        def dosen = Dosen.get(session.user)
+        def jurnalInstance = Jurnal.findAllByTagDosen1OrTagDosen2OrTagDosen3(dosen, dosen, dosen, params)
+        def jurnalInstanceCount = Jurnal.countByTagDosen1OrTagDosen2OrTagDosen3(dosen, dosen, dosen, params)
         [jurnalInstanceList: jurnalInstance, jurnalInstanceCount: jurnalInstanceCount]
     }
 
@@ -36,7 +37,8 @@ class JurnalController {
             respond jurnalInstance.errors, view:'create'
             return
         }
-
+        def dosen = Dosen.get(session.user)
+        jurnalInstance.tagDosen1 = dosen
         jurnalInstance.save flush:true
 
         request.withFormat {

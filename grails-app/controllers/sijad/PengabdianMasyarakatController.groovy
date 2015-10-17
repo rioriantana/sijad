@@ -12,8 +12,9 @@ class PengabdianMasyarakatController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        def pengabdianMasyarakatInstance = PengabdianMasyarakat.findAllByTagDosen1OrTagDosen2OrTagDosen3(session.user, session.user, session.user, params)
-        def pengabdianMasyarakatInstanceCount = PengabdianMasyarakat.countByTagDosen1OrTagDosen2OrTagDosen3(session.user, session.user, session.user, params)
+        def dosen = Dosen.get(session.user)
+        def pengabdianMasyarakatInstance = PengabdianMasyarakat.findAllByTagDosen1OrTagDosen2OrTagDosen3(dosen, dosen, dosen, params)
+        def pengabdianMasyarakatInstanceCount = PengabdianMasyarakat.countByTagDosen1OrTagDosen2OrTagDosen3(dosen, dosen, dosen, params)
         [pengabdianMasyarakatInstanceList: pengabdianMasyarakatInstance, pengabdianMasyarakatInstanceCount: pengabdianMasyarakatInstanceCount]
     }
 
@@ -36,7 +37,8 @@ class PengabdianMasyarakatController {
             respond pengabdianMasyarakatInstance.errors, view:'create'
             return
         }
-
+        def dosen = Dosen.get(session.user)
+        pengabdianMasyarakatInstance.tagDosen1 = dosen
         pengabdianMasyarakatInstance.save flush:true
 
         request.withFormat {

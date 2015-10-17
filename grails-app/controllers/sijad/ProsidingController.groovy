@@ -12,8 +12,9 @@ class ProsidingController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        def prosidingInstance = Prosiding.findAllByTagDosen1OrTagDosen2OrTagDosen3(session.user, session.user, session.user, params)
-        def prosidingInstanceCount = Prosiding.countByTagDosen1OrTagDosen2OrTagDosen3(session.user, session.user, session.user, params)
+        def dosen = Dosen.get(session.user)
+        def prosidingInstance = Prosiding.findAllByTagDosen1OrTagDosen2OrTagDosen3(dosen, dosen, dosen, params)
+        def prosidingInstanceCount = Prosiding.countByTagDosen1OrTagDosen2OrTagDosen3(dosen, dosen, dosen, params)
         [prosidingInstanceList: prosidingInstance, prosidingInstanceCount: prosidingInstanceCount]
     }
 
@@ -36,7 +37,8 @@ class ProsidingController {
             respond prosidingInstance.errors, view:'create'
             return
         }
-
+        def dosen = Dosen.get(session.user)
+        prosidingInstance.tagDosen1 = dosen
         prosidingInstance.save flush:true
 
         request.withFormat {

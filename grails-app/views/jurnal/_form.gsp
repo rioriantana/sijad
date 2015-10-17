@@ -92,18 +92,10 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: jurnalInstance, field: 'tagDosen1', 'error')} ">
-	<label for="tagDosen1">
-		<g:message code="jurnal.tagDosen1.label" default="Tag Dosen1" />
-		
-	</label>
-	<g:select id="tagDosen1" name="tagDosen1.id" from="${sijad.Dosen.list()}" optionKey="id" value="${jurnalInstance?.tagDosen1?.id}" class="many-to-one" noSelection="['null': '']"/>
-
-</div>
 
 <div class="fieldcontain ${hasErrors(bean: jurnalInstance, field: 'tagDosen2', 'error')} ">
 	<label for="tagDosen2">
-		<g:message code="jurnal.tagDosen2.label" default="Tag Dosen2" />
+		<g:message code="jurnal.tagDosen2.label" default="Tandai Dosen" />
 		
 	</label>
 	<g:select id="tagDosen2" name="tagDosen2.id" from="${sijad.Dosen.list()}" optionKey="id" value="${jurnalInstance?.tagDosen2?.id}" class="many-to-one" noSelection="['null': '']"/>
@@ -112,7 +104,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: jurnalInstance, field: 'tagDosen3', 'error')} ">
 	<label for="tagDosen3">
-		<g:message code="jurnal.tagDosen3.label" default="Tag Dosen3" />
+		<g:message code="jurnal.tagDosen3.label" default="Tandai Dosen" />
 		
 	</label>
 	<g:select id="tagDosen3" name="tagDosen3.id" from="${sijad.Dosen.list()}" optionKey="id" value="${jurnalInstance?.tagDosen3?.id}" class="many-to-one" noSelection="['null': '']"/>
