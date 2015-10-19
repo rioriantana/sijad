@@ -55,7 +55,7 @@
 	<g:form action="doLogin">
 				<div id="username_inputmiddle">
 			
-					<input type="text" name="nidn" id="url" placeholder="NIDN" onclick="this.value = ''">
+					<input type="text" name="nidn" id="url" placeholder="Username" onclick="this.value = ''">
 					<img id="url_user" src="${resource(dir: 'images', file: 'mailicon.png')}" alt="">
 				</div>
 

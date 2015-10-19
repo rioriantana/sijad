@@ -2,6 +2,7 @@ package sijad
 
 class Dosen {
 	String nidn
+	String nip
 	String nama
 	String golongan
 	String jabatan
@@ -9,6 +10,7 @@ class Dosen {
 	String password
     static constraints = {
     	nidn(nullable:true)
+    	nip(nullable: true)
 		nama(nullable:true)
 		golongan(nullable:true)
 		jabatan(nullable:true, inList: ['Asisten Ahli', 'Lektor', 'Lektor Kepala', 'Guru Besar'])

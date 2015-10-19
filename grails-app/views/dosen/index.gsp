@@ -24,7 +24,9 @@
 			<thead>
 					<tr>
 					
-						<g:sortableColumn property="nidn" title="${message(code: 'dosen.nidn.label', default: 'Nidn')}" />
+						<g:sortableColumn property="nidn" title="${message(code: 'dosen.nidn.label', default: 'Username')}" />
+					
+						<g:sortableColumn property="nip" title="${message(code: 'dosen.nip.label', default: 'Nip')}" />
 					
 						<g:sortableColumn property="nama" title="${message(code: 'dosen.nama.label', default: 'Nama')}" />
 					
@@ -34,8 +36,6 @@
 					
 						<g:sortableColumn property="role" title="${message(code: 'dosen.role.label', default: 'Role')}" />
 					
-						<g:sortableColumn property="password" title="${message(code: 'dosen.password.label', default: 'Password')}" />
-					
 					</tr>
 				</thead>
 				<tbody>
@@ -44,6 +44,8 @@
 					
 						<td><g:link action="show" id="${dosenInstance.id}">${fieldValue(bean: dosenInstance, field: "nidn")}</g:link></td>
 					
+						<td>${fieldValue(bean: dosenInstance, field: "nip")}</td>
+					
 						<td>${fieldValue(bean: dosenInstance, field: "nama")}</td>
 					
 						<td>${fieldValue(bean: dosenInstance, field: "golongan")}</td>
@@ -51,8 +53,6 @@
 						<td>${fieldValue(bean: dosenInstance, field: "jabatan")}</td>
 					
 						<td>${fieldValue(bean: dosenInstance, field: "role")}</td>
-					
-						<td>${fieldValue(bean: dosenInstance, field: "password")}</td>
 					
 					</tr>
 				</g:each>

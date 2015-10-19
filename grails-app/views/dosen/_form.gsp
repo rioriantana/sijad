@@ -4,10 +4,19 @@
 
 <div class="fieldcontain ${hasErrors(bean: dosenInstance, field: 'nidn', 'error')} ">
 	<label for="nidn">
-		<g:message code="dosen.nidn.label" default="Nidn" />
+		<g:message code="dosen.nidn.label" default="Username" />
 		
 	</label>
 	<g:textField name="nidn" value="${dosenInstance?.nidn}"/>
+
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: dosenInstance, field: 'nip', 'error')} ">
+	<label for="nip">
+		<g:message code="dosen.nip.label" default="Nip" />
+		
+	</label>
+	<g:textField name="nip" value="${dosenInstance?.nip}"/>
 
 </div>
 

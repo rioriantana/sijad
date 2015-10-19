@@ -25,9 +25,18 @@
 			
 				<g:if test="${dosenInstance?.nidn}">
 				<li class="fieldcontain">
-					<span id="nidn-label" class="property-label"><g:message code="dosen.nidn.label" default="Nidn" /></span>
+					<span id="nidn-label" class="property-label"><g:message code="dosen.nidn.label" default="Username" /></span>
 					
 						<span class="property-value" aria-labelledby="nidn-label"><g:fieldValue bean="${dosenInstance}" field="nidn"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${dosenInstance?.nip}">
+				<li class="fieldcontain">
+					<span id="nip-label" class="property-label"><g:message code="dosen.nip.label" default="Nip" /></span>
+					
+						<span class="property-value" aria-labelledby="nip-label"><g:fieldValue bean="${dosenInstance}" field="nip"/></span>
 					
 				</li>
 				</g:if>
