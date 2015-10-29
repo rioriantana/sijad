@@ -24,7 +24,7 @@
 		<r:layoutResources />
 	</head>
 	<body>
-		<div id="grailsLogo" role="banner"><a href="#"><img src="${resource(dir: 'images', file: 'Sijad.png')}" alt="Grails" width="180" /></a></div>
+		<div class="judul" role="banner">Sistem Informasi Kinerja Dosen Fisika</div>
 		<g:layoutBody/>
 		<div class="footer" role="contentinfo"></div>
 		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
