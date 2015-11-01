@@ -6,9 +6,8 @@
 		<title>Welcome to Grails</title>
 		<style type="text/css" media="screen">
 			#status {
-				background-color: #eee;
-				border: .2em solid #fafafa;
-				margin-top: 0px;
+				border-right: 2px solid #f0f0f0;
+				margin-top: 20px;
 				width: 15em;
 				float: left;
 			}
@@ -27,13 +26,12 @@
 				line-height: 1.3;
 				padding-top: 15px;
 				padding-left: 1em;
-				height: 35px;
+				height: 38px;
 			}
-
 			#status li:hover {
 				margin-right: 0px;
 				color: #f0f0f0;
-				background-color: #E8A60C;
+				background-color: #F7C859;
 			}
 			#status h1 {
 				text-transform: uppercase;
@@ -95,8 +93,8 @@
 			
 		</div>
 		<div id="page-body" role="main">
-			<h1>Welcome to Si JAD</h1>
-			<p>Si Jad adalah Sistem Informasi Kinerja Dosen Fisika yang bertujuan untuk memonitoring kinerja dosen Program Studi Fisika FMIPA UNS. Si Jad dibuat untuk meningkatkan kinerja antar dosen baik di dalam UNS maupun di luar UNS. Si Jad berisi tentang pencapaian yang sudah dilaksanakan oleh Dosen Fisika FMIPA UNS dari tahun ke tahun.</p>
+			<h1>Welcome to SIJAD</h1>
+			<p>SIJAD adalah Sistem Informasi Kinerja Dosen Fisika yang bertujuan untuk memonitoring kinerja dosen Program Studi Fisika FMIPA UNS. SIJAD dibuat untuk meningkatkan kinerja antar dosen baik di dalam UNS maupun di luar UNS. SIJAD berisi tentang pencapaian yang sudah dilaksanakan oleh Dosen Fisika FMIPA UNS dari tahun ke tahun.</p>
 
 			<div id="controller-list" role="navigation">
 				<h2>Informasi mengenai prestasi anda :</h2>
