@@ -95,8 +95,8 @@
 			
 		</div>
 		<div id="page-body" role="main">
-			<h1>Welcome to Si JAD</h1>
-			<p>Si Jad adalah Sistem Informasi Kinerja Dosen Fisika yang bertujuan untuk memonitoring kinerja dosen Program Studi Fisika FMIPA UNS. Si Jad dibuat untuk meningkatkan kinerja antar dosen baik di dalam UNS maupun di luar UNS. Si Jad berisi tentang pencapaian yang sudah dilaksanakan oleh Dosen Fisika FMIPA UNS dari tahun ke tahun.</p>
+			<h1>Welcome to SIJAD</h1>
+			<p>SIJAD adalah Sistem Informasi Kinerja Dosen Fisika yang bertujuan untuk memonitoring kinerja dosen Program Studi Fisika FMIPA UNS. Si Jad dibuat untuk meningkatkan kinerja antar dosen baik di dalam UNS maupun di luar UNS. Si Jad berisi tentang pencapaian yang sudah dilaksanakan oleh Dosen Fisika FMIPA UNS dari tahun ke tahun.</p>
 
 			<div id="controller-list" role="navigation">
 				<h2>Informasi mengenai prestasi anda :</h2>
