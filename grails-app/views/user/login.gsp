@@ -4,7 +4,7 @@
 
 
 	<!-- General meta information -->
-	<title>Login Form by Oussama Afellad</title>
+	<title>Login SIJAD</title>
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
 	<meta name="robots" content="index, follow" />
