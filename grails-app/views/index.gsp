@@ -93,7 +93,7 @@
 			
 		</div>
 		<div id="page-body" role="main">
-			<h1>Welcome to SIJAD</h1>
+			<h1>Sedikit tentang SIJAD</h1>
 			<p>SIJAD adalah Sistem Informasi Kinerja Dosen Fisika yang bertujuan untuk memonitoring kinerja dosen Program Studi Fisika FMIPA UNS. SIJAD dibuat untuk meningkatkan kinerja antar dosen baik di dalam UNS maupun di luar UNS. SIJAD berisi tentang pencapaian yang sudah dilaksanakan oleh Dosen Fisika FMIPA UNS dari tahun ke tahun.</p>
 
 			<div id="controller-list" role="navigation">
