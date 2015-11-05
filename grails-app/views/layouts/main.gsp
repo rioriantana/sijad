@@ -24,7 +24,7 @@
 		<r:layoutResources />
 	</head>
 	<body>
-		<div class="judul" role="banner">Sistem Informasi Kinerja Dosen Fisika</div>
+		<div class="judul" role="banner"><h3>SIJAD FISIKA</h3> Sistem Informasi Kinerja Dosen Fisika</div>
 		<g:layoutBody/>
 		<div class="footer" role="contentinfo">
 		<p align="right">@2015 FISIKA ICT</p>
