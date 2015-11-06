@@ -1,9 +1,11 @@
+<%@ page import="org.grails.plugins.google.visualization.formatter.BarFormatter" %>
 
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta name="layout" content="main"/>
 		<title>Welcome to Grails</title>
+		
 		<style type="text/css" media="screen">
 			#status {
 				border-right: 2px solid #f0f0f0;
@@ -80,6 +82,9 @@
 		</style>
 	</head>
 	<body>
+
+	
+
 		<a href="#page-body" class="skip"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div id="status" role="complementary">
 			<ul>
@@ -106,6 +111,19 @@
 						<li><g:link class="create" controller="user" action="logout">Logout</g:link></li>
 				</ul>
 			</div>
+
+<%
+def departmentRevenueColumns = [['string', 'Department'], ['number', 'Revenues']];
+def departmentRevenueData = [['Shoes', 10700], ['Sports', -15400], ['Toys', 12500], ['Electronics', -2100], ['Food', 22600], ['Art', 1100]];
+def barFormatter = new BarFormatter(1);
+barFormatter.width = 120;
+def barFormatters = [barFormatter];
+%>
+
+<gvisualization:table elementId="barformat_div" allowHtml="${true}" showRowNumber="${true}"
+columns="${departmentRevenueColumns}" data="${departmentRevenueData}" formatters="${barFormatters}"/>
+<div id="barformat_div"></div>
+                    
 		</div>
 	</body>
 </html>

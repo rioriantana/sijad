@@ -1,7 +1,7 @@
 package sijad
 
 
-
+import grails.converters.JSON
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
@@ -76,6 +76,24 @@ class DosenController {
         }
     }
 
+    def grafik(){
+    def cols = [
+      [label: "Topping", type:"string"],
+      [label: "Slices", type:"number"]
+    ]
+ 
+    def rows = [
+      [c: [[v: "Mushrooms"], [v:3]]],
+      [c: [[v: "Onions"], [v:1]]],
+      [c: [[v: "Olives"], [v:1]]],
+      [c: [[v: "Zucchini"], [v:1]]],
+      [c: [[v: "Pepperoni"], [v:2]]]
+    ]
+ 
+    def data = [cols: cols, rows: rows]
+    render data as JSON
+    }
+
     @Transactional
     def delete(Dosen dosenInstance) {
 
@@ -104,4 +122,5 @@ class DosenController {
             '*'{ render status: NOT_FOUND }
         }
     }
+
 }
