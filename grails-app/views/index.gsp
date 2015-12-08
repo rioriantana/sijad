@@ -5,7 +5,7 @@
 	<head>
 		<meta name="layout" content="main"/>
 		<title>Welcome to Grails</title>
-		
+		<script type="text/javascript" src="https://www.google.com/jsapi"></script>		
 		<style type="text/css" media="screen">
 			#status {
 				border-right: 2px solid #f0f0f0;
@@ -113,16 +113,18 @@
 			</div>
 
 <%
-def departmentRevenueColumns = [['string', 'Department'], ['number', 'Revenues']];
-def departmentRevenueData = [['Shoes', 10700], ['Sports', -15400], ['Toys', 12500], ['Electronics', -2100], ['Food', 22600], ['Art', 1100]];
-def barFormatter = new BarFormatter(1);
-barFormatter.width = 120;
-def barFormatters = [barFormatter];
+def myDailyActivitiesColumns = [['string', 'Task'], ['number', 'Hours per Day']]
+def myDailyActivitiesData = [['Work', 11], ['Eat', 2], ['Commute', 2], ['Watch TV', 2], ['Sleep', 7]]
+def defineDataTypeOfVariables = [['string', 'Task'], ['number', 'Total Sales($)'], ['number', 'Total Revenue($)']]
+def salesExpenses = [ ['2004', '10000', '6000'],['2005', '8000', '5000'],['2006', '12500', '9000'],['2007', '15500', '12000']]
 %>
 
-<gvisualization:table elementId="barformat_div" allowHtml="${true}" showRowNumber="${true}"
-columns="${departmentRevenueColumns}" data="${departmentRevenueData}" formatters="${barFormatters}"/>
-<div id="barformat_div"></div>
+<gvisualization:pieCoreChart elementId="piechart" title="My Daily Activities" width="${450}" height="${300}"
+columns="${myDailyActivitiesColumns}" data="${myDailyActivitiesData}" />
+<div id="piechart"></div>
+<gvisualization:columnCoreChart elementId="barchart"   hAxis= "${new Expando([slantedTextAngle:'180',textStyle:new Expando(color:'black', fontName:'Arial', fontSize:14)])}"  bar= "${new Expando(groupWidth:'40%')}" chartArea="${new Expando(top:70, width:'100%' , height:'60%', left:50,bottom:150)}" title="Company Performance"  titleTextStyle="${ new Expando([color:'black', fontName:'Arial', fontSize:14])}" width="${700}" height="${400}" columns="${defineDataTypeOfVariables}" data="${salesExpenses}" />
+ 
+<div id="barchart"></div>
                     
 		</div>
 	</body>
