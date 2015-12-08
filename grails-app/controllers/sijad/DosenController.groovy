@@ -37,7 +37,7 @@ class DosenController {
             respond dosenInstance.errors, view:'create'
             return
         }
-
+        
         dosenInstance.save flush:true
 
         request.withFormat {
@@ -123,4 +123,8 @@ class DosenController {
         }
     }
 
+    def testData(){
+        def data = params.data
+        print data
+    }
 }

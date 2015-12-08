@@ -15,7 +15,7 @@ class JurnalController {
         def dosen = Dosen.get(session.user)
         def jurnalInstance = Jurnal.findAllByTagDosen1OrTagDosen2OrTagDosen3(dosen, dosen, dosen, params)
         def jurnalInstanceCount = Jurnal.countByTagDosen1OrTagDosen2OrTagDosen3(dosen, dosen, dosen, params)
-        [jurnalInstanceList: jurnalInstance, jurnalInstanceCount: jurnalInstanceCount]
+        [jurnalInstanceList: jurnalInstance, jurnalInstanceCount: jurnalInstanceCount, oke: "okeoke"]
     }
 
     def show(Jurnal jurnalInstance) {
@@ -23,7 +23,8 @@ class JurnalController {
     }
 
     def create() {
-        respond new Jurnal(params)
+        def dosenInstance = Dosen.list();
+        render(view: "create", model: [dosenInstance: dosenInstance, oke: "oke", jurnalInstance: new Jurnal(params)])
     }
 
     @Transactional
@@ -39,6 +40,13 @@ class JurnalController {
         }
         def dosen = Dosen.get(session.user)
         jurnalInstance.tagDosen1 = dosen
+
+        def checkedBooks = params.list('myCheckbox')
+        checkedBooks.each {
+            def dosen1 = Dosen.get(it)
+        }
+        jurnalInstance.tagDosen2 = dosen1
+
         jurnalInstance.save flush:true
 
         request.withFormat {
@@ -104,5 +112,11 @@ class JurnalController {
             }
             '*'{ render status: NOT_FOUND }
         }
+    }
+
+    def listDosen(){
+        def dosenInstance = Dosen.list();
+        def oke = "okeoke"
+        [dosenInstanceList: dosenInstance, oke: oke]
     }
 }

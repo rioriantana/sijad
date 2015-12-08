@@ -5,7 +5,7 @@
 	<head>
 		<meta name="layout" content="main"/>
 		<title>Welcome to Grails</title>
-		
+		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
 		<style type="text/css" media="screen">
 			#status {
 				border-right: 2px solid #f0f0f0;
@@ -103,27 +103,45 @@
 
 			<div id="controller-list" role="navigation">
 				<h2>Informasi mengenai prestasi anda :</h2>
-				<ul>
-						<li><g:link class="create" controller="jurnal">Jurnal</g:link></li>
-						<li><g:link class="create" controller="prosiding">Prosiding</g:link></li>
-						<li><g:link class="create" controller="penelitian">Penelitian</g:link></li>
-						<li><g:link class="create" controller="pengabdianMasyarakat">Pengabdian Masyarakat</g:link></li>
-						<li><g:link class="create" controller="user" action="logout">Logout</g:link></li>
-				</ul>
 			</div>
 
 <%
-def departmentRevenueColumns = [['string', 'Department'], ['number', 'Revenues']];
-def departmentRevenueData = [['Shoes', 10700], ['Sports', -15400], ['Toys', 12500], ['Electronics', -2100], ['Food', 22600], ['Art', 1100]];
-def barFormatter = new BarFormatter(1);
-barFormatter.width = 120;
-def barFormatters = [barFormatter];
-%>
+		def defineDataTypeOfVariables = [['string', 'Task'], ['number', 'Pengabdian Masyarakat'], ['number', 'Jurnal'], ['number', 'Penelitian'], ['number', 'Prosiding']]
+		def salesExpenses = [ ['2012', '100', '60', '200', '65'],['2013', '80', '50', '85', '59'],['2014', '125', '90', '112', '91'],['2015', '155', '120', '130', '95']]
+		def judulJurnal = [['string', 'Task'], ['number', 'Persentase']]
+		def dataDosenJurnal = [['Iwan Yahya', 30],['Nuryani', 24],['Suparmi',15],['Ahmad Marzuki', 21]]
+       %>
 
-<gvisualization:table elementId="barformat_div" allowHtml="${true}" showRowNumber="${true}"
-columns="${departmentRevenueColumns}" data="${departmentRevenueData}" formatters="${barFormatters}"/>
-<div id="barformat_div"></div>
-                    
+      <gvisualization:columnCoreChart elementId="barchart"   hAxis= "${new Expando([slantedTextAngle:'180',textStyle:new Expando(color:'black', fontName:'Arial', fontSize:14)])}"  bar= "${new Expando(groupWidth:'80%')}" chartArea="${new Expando(top:70, width:'100%' , height:'60%', left:150,bottom:150)}" title="Prestasi Dosen 4 Tahun Terahir"  titleTextStyle="${ new Expando([color:'black', fontName:'Arial', fontSize:14])}" width="${900}" height="${400}" columns="${defineDataTypeOfVariables}" data="${salesExpenses}" />
+ 
+		<div id="barchart"></div>
+		<table width="100%" align="center">
+		<tr>
+		<td>
+		<gvisualization:pieCoreChart elementId="piechart1" title="Prosentase Publish Jurnal Tahun 2015" width="${450}" height="${300}" columns="${judulJurnal}" data="${dataDosenJurnal}" />
+ 
+		<div id="piechart1"></div>
+		</td>
+		<td>
+		<gvisualization:pieCoreChart elementId="piechart2" title="Prosentase Publish Prosiding Tahun 2015" width="${450}" height="${300}" columns="${judulJurnal}" data="${dataDosenJurnal}" />
+ 
+		<div id="piechart2"></div>
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<gvisualization:pieCoreChart elementId="piechart3" title="Prosentase Publish Penelitian Tahun 2015" width="${450}" height="${300}" columns="${judulJurnal}" data="${dataDosenJurnal}" />
+ 
+		<div id="piechart3"></div>
+		</td>
+		<td>
+		<gvisualization:pieCoreChart elementId="piechart4" title="Prosentase Publish Pengabdian Masyarakat Tahun 2015" width="${450}" height="${300}" columns="${judulJurnal}" data="${dataDosenJurnal}" />
+ 
+		<div id="piechart4"></div>
+		</td>
+		</tr>
+		</table>
+
 		</div>
 	</body>
 </html>

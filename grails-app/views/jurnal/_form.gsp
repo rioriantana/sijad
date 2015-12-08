@@ -120,3 +120,12 @@
 
 </div>
 
+
+			
+			<div class="fieldcontain ${hasErrors(bean: jurnalInstance, field: 'alamatWebJurnal', 'error')} ">
+			<label for="alamatWebJurnal">		
+				</label>
+				<g:each in="${dosenInstance}" var="dosen">
+					${dosen} <g:checkBox name="myCheckbox" checked="false" value="${fieldValue(bean: dosenInstance, field:"id")}" />
+				</g:each>
+			</div>

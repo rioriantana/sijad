@@ -25,6 +25,7 @@
 				</g:eachError>
 			</ul>
 			</g:hasErrors>
+			${oke}
 			<g:form url="[resource:dosenInstance, action:'save']" >
 				<fieldset class="form">
 					<g:render template="form"/>
