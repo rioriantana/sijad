@@ -37,7 +37,7 @@ class DosenController {
             respond dosenInstance.errors, view:'create'
             return
         }
-
+        
         dosenInstance.save flush:true
 
         request.withFormat {
@@ -123,23 +123,4 @@ class DosenController {
         }
     }
 
-     def statusPelanggan () {
-       
-         def nomorPendaftaran = params.nomorPendaftaran
-         def pendaftaran = Dosen.findByNip(nomorPendaftaran, params)
-        if (!pendaftaran) {
-            redirect(uri: "https://www.google.co.id/" )
-        }
-        else{
-        def statusPendaftaran = pendaftaran.jabatan
-            def status = []
-            if (statusPendaftaran == "Guru Besar") {
-                status = 0
-            }
-            else{
-               status = 6 
-            }
-        redirect(uri: "http://localhost/statusPelanggan.php?id="+nomorPendaftaran+"&status="+status )
-        } 
-    }
 }
