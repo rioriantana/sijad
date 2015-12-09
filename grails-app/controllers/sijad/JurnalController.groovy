@@ -12,10 +12,21 @@ class JurnalController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
+        params.offset = params.offset ? params.offset.toInteger() : 0
         def dosen = Dosen.get(session.user)
-        def jurnalInstance = Jurnal.findAllByTagDosen1OrTagDosen2OrTagDosen3(dosen, dosen, dosen, params)
-        def jurnalInstanceCount = Jurnal.countByTagDosen1OrTagDosen2OrTagDosen3(dosen, dosen, dosen, params)
-        [jurnalInstanceList: jurnalInstance, jurnalInstanceCount: jurnalInstanceCount, oke: "okeoke"]
+        List jurnals = Jurnal.createCriteria().list{
+            dosens{
+            eq('nama', dosen.nama)
+            } 
+            maxResults(params.max)
+            firstResult(params.offset)
+            }   
+        def jurnalsis = Jurnal.createCriteria().count{
+            dosens{
+            eq('nama', dosen.nama)
+            }     
+            }   
+        [jurnalInstanceList: jurnals, jurnalInstanceCount: jurnalsis ]
     }
 
     def show(Jurnal jurnalInstance) {
@@ -23,8 +34,7 @@ class JurnalController {
     }
 
     def create() {
-        def dosenInstance = Dosen.list();
-        render(view: "create", model: [dosenInstance: dosenInstance, oke: "oke", jurnalInstance: new Jurnal(params)])
+        respond new Jurnal(params)
     }
 
     @Transactional
@@ -38,14 +48,6 @@ class JurnalController {
             respond jurnalInstance.errors, view:'create'
             return
         }
-        def dosen = Dosen.get(session.user)
-        jurnalInstance.tagDosen1 = dosen
-
-        def checkedBooks = params.list('myCheckbox')
-        checkedBooks.each {
-            def dosen1 = Dosen.get(it)
-        }
-        jurnalInstance.tagDosen2 = dosen1
 
         jurnalInstance.save flush:true
 
@@ -112,11 +114,5 @@ class JurnalController {
             }
             '*'{ render status: NOT_FOUND }
         }
-    }
-
-    def listDosen(){
-        def dosenInstance = Dosen.list();
-        def oke = "okeoke"
-        [dosenInstanceList: dosenInstance, oke: oke]
     }
 }

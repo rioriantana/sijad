@@ -12,10 +12,21 @@ class PengabdianMasyarakatController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
+        params.offset = params.offset ? params.offset.toInteger() : 0
         def dosen = Dosen.get(session.user)
-        def pengabdianMasyarakatInstance = PengabdianMasyarakat.findAllByTagDosen1OrTagDosen2OrTagDosen3(dosen, dosen, dosen, params)
-        def pengabdianMasyarakatInstanceCount = PengabdianMasyarakat.countByTagDosen1OrTagDosen2OrTagDosen3(dosen, dosen, dosen, params)
-        [pengabdianMasyarakatInstanceList: pengabdianMasyarakatInstance, pengabdianMasyarakatInstanceCount: pengabdianMasyarakatInstanceCount]
+        List pengabdianMasyarakats = PengabdianMasyarakat.createCriteria().list{
+            dosens{
+            eq('nama', dosen.nama)
+            } 
+            maxResults(params.max)
+            firstResult(params.offset)
+            }   
+        def pengabdianMasyarakatsis = PengabdianMasyarakat.createCriteria().count{
+            dosens{
+            eq('nama', dosen.nama)
+            }     
+            }   
+        [pengabdianMasyarakatInstanceList: pengabdianMasyarakats, pengabdianMasyarakatInstanceCount: pengabdianMasyarakatsis ]
     }
 
     def show(PengabdianMasyarakat pengabdianMasyarakatInstance) {
@@ -37,8 +48,7 @@ class PengabdianMasyarakatController {
             respond pengabdianMasyarakatInstance.errors, view:'create'
             return
         }
-        def dosen = Dosen.get(session.user)
-        pengabdianMasyarakatInstance.tagDosen1 = dosen
+
         pengabdianMasyarakatInstance.save flush:true
 
         request.withFormat {

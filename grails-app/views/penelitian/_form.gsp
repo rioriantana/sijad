@@ -47,40 +47,21 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: penelitianInstance, field: 'namaAnggota1', 'error')} ">
-	<label for="namaAnggota1">
-		<g:message code="penelitian.namaAnggota1.label" default="Nama Anggota1" />
+<div class="fieldcontain ${hasErrors(bean: penelitianInstance, field: 'namaAnggota', 'error')} ">
+	<label for="namaAnggota">
+		<g:message code="penelitian.namaAnggota.label" default="Nama Anggota" />
 		
 	</label>
-	<g:textField name="namaAnggota1" value="${penelitianInstance?.namaAnggota1}"/>
+	<g:textField name="namaAnggota" value="${penelitianInstance?.namaAnggota}"/>
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: penelitianInstance, field: 'namaAnggota2', 'error')} ">
-	<label for="namaAnggota2">
-		<g:message code="penelitian.namaAnggota2.label" default="Nama Anggota2" />
+<div class="fieldcontain ${hasErrors(bean: penelitianInstance, field: 'dosens', 'error')} ">
+	<label for="dosens">
+		<g:message code="penelitian.dosens.label" default="Dosens" />
 		
 	</label>
-	<g:textField name="namaAnggota2" value="${penelitianInstance?.namaAnggota2}"/>
-
-</div>
-
-
-<div class="fieldcontain ${hasErrors(bean: penelitianInstance, field: 'tagDosen2', 'error')} ">
-	<label for="tagDosen2">
-		<g:message code="penelitian.tagDosen2.label" default="Tandai Dosen" />
-		
-	</label>
-	<g:select id="tagDosen2" name="tagDosen2.id" from="${sijad.Dosen.list()}" optionKey="id" value="${penelitianInstance?.tagDosen2?.id}" class="many-to-one" noSelection="['null': '']"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: penelitianInstance, field: 'tagDosen3', 'error')} ">
-	<label for="tagDosen3">
-		<g:message code="penelitian.tagDosen3.label" default="Tandai Dosen" />
-		
-	</label>
-	<g:select id="tagDosen3" name="tagDosen3.id" from="${sijad.Dosen.list()}" optionKey="id" value="${penelitianInstance?.tagDosen3?.id}" class="many-to-one" noSelection="['null': '']"/>
+	<g:select name="dosens" from="${sijad.Dosen.list()}" multiple="multiple" optionKey="id" size="5" value="${penelitianInstance?.dosens*.id}" class="many-to-many"/>
 
 </div>
 

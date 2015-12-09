@@ -50,29 +50,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${prosidingInstance?.namaKetua}">
+				<g:if test="${prosidingInstance?.namaAnggota}">
 				<li class="fieldcontain">
-					<span id="namaKetua-label" class="property-label"><g:message code="prosiding.namaKetua.label" default="Nama Ketua" /></span>
+					<span id="namaAnggota-label" class="property-label"><g:message code="prosiding.namaAnggota.label" default="Nama Anggota" /></span>
 					
-						<span class="property-value" aria-labelledby="namaKetua-label"><g:fieldValue bean="${prosidingInstance}" field="namaKetua"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${prosidingInstance?.namaAnggota1}">
-				<li class="fieldcontain">
-					<span id="namaAnggota1-label" class="property-label"><g:message code="prosiding.namaAnggota1.label" default="Nama Anggota1" /></span>
-					
-						<span class="property-value" aria-labelledby="namaAnggota1-label"><g:fieldValue bean="${prosidingInstance}" field="namaAnggota1"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${prosidingInstance?.namaAnggota2}">
-				<li class="fieldcontain">
-					<span id="namaAnggota2-label" class="property-label"><g:message code="prosiding.namaAnggota2.label" default="Nama Anggota2" /></span>
-					
-						<span class="property-value" aria-labelledby="namaAnggota2-label"><g:fieldValue bean="${prosidingInstance}" field="namaAnggota2"/></span>
+						<span class="property-value" aria-labelledby="namaAnggota-label"><g:fieldValue bean="${prosidingInstance}" field="namaAnggota"/></span>
 					
 				</li>
 				</g:if>
@@ -95,38 +77,22 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${prosidingInstance?.tagDosen1}">
-				<li class="fieldcontain">
-					<span id="tagDosen1-label" class="property-label"><g:message code="prosiding.tagDosen1.label" default="Tag Dosen1" /></span>
-					
-						<span class="property-value" aria-labelledby="tagDosen1-label"><g:link controller="dosen" action="show" id="${prosidingInstance?.tagDosen1?.id}">${prosidingInstance?.tagDosen1?.encodeAsHTML()}</g:link></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${prosidingInstance?.tagDosen2}">
-				<li class="fieldcontain">
-					<span id="tagDosen2-label" class="property-label"><g:message code="prosiding.tagDosen2.label" default="Tag Dosen2" /></span>
-					
-						<span class="property-value" aria-labelledby="tagDosen2-label"><g:link controller="dosen" action="show" id="${prosidingInstance?.tagDosen2?.id}">${prosidingInstance?.tagDosen2?.encodeAsHTML()}</g:link></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${prosidingInstance?.tagDosen3}">
-				<li class="fieldcontain">
-					<span id="tagDosen3-label" class="property-label"><g:message code="prosiding.tagDosen3.label" default="Tag Dosen3" /></span>
-					
-						<span class="property-value" aria-labelledby="tagDosen3-label"><g:link controller="dosen" action="show" id="${prosidingInstance?.tagDosen3?.id}">${prosidingInstance?.tagDosen3?.encodeAsHTML()}</g:link></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${prosidingInstance?.alamatWebProsiding}">
 				<li class="fieldcontain">
 					<span id="alamatWebProsiding-label" class="property-label"><g:message code="prosiding.alamatWebProsiding.label" default="Alamat Web Prosiding" /></span>
 					
 						<span class="property-value" aria-labelledby="alamatWebProsiding-label"><g:fieldValue bean="${prosidingInstance}" field="alamatWebProsiding"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${prosidingInstance?.dosens}">
+				<li class="fieldcontain">
+					<span id="dosens-label" class="property-label"><g:message code="prosiding.dosens.label" default="Dosens" /></span>
+					
+						<g:each in="${prosidingInstance.dosens}" var="d">
+						<span class="property-value" aria-labelledby="dosens-label"><g:link controller="dosen" action="show" id="${d.id}">${d?.encodeAsHTML()}</g:link></span>
+						</g:each>
 					
 				</li>
 				</g:if>

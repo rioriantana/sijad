@@ -68,47 +68,22 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${penelitianInstance?.namaAnggota1}">
+				<g:if test="${penelitianInstance?.namaAnggota}">
 				<li class="fieldcontain">
-					<span id="namaAnggota1-label" class="property-label"><g:message code="penelitian.namaAnggota1.label" default="Nama Anggota1" /></span>
+					<span id="namaAnggota-label" class="property-label"><g:message code="penelitian.namaAnggota.label" default="Nama Anggota" /></span>
 					
-						<span class="property-value" aria-labelledby="namaAnggota1-label"><g:fieldValue bean="${penelitianInstance}" field="namaAnggota1"/></span>
+						<span class="property-value" aria-labelledby="namaAnggota-label"><g:fieldValue bean="${penelitianInstance}" field="namaAnggota"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${penelitianInstance?.namaAnggota2}">
+				<g:if test="${penelitianInstance?.dosens}">
 				<li class="fieldcontain">
-					<span id="namaAnggota2-label" class="property-label"><g:message code="penelitian.namaAnggota2.label" default="Nama Anggota2" /></span>
+					<span id="dosens-label" class="property-label"><g:message code="penelitian.dosens.label" default="Dosens" /></span>
 					
-						<span class="property-value" aria-labelledby="namaAnggota2-label"><g:fieldValue bean="${penelitianInstance}" field="namaAnggota2"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${penelitianInstance?.tagDosen1}">
-				<li class="fieldcontain">
-					<span id="tagDosen1-label" class="property-label"><g:message code="penelitian.tagDosen1.label" default="Tag Dosen1" /></span>
-					
-						<span class="property-value" aria-labelledby="tagDosen1-label"><g:link controller="dosen" action="show" id="${penelitianInstance?.tagDosen1?.id}">${penelitianInstance?.tagDosen1?.encodeAsHTML()}</g:link></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${penelitianInstance?.tagDosen2}">
-				<li class="fieldcontain">
-					<span id="tagDosen2-label" class="property-label"><g:message code="penelitian.tagDosen2.label" default="Tag Dosen2" /></span>
-					
-						<span class="property-value" aria-labelledby="tagDosen2-label"><g:link controller="dosen" action="show" id="${penelitianInstance?.tagDosen2?.id}">${penelitianInstance?.tagDosen2?.encodeAsHTML()}</g:link></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${penelitianInstance?.tagDosen3}">
-				<li class="fieldcontain">
-					<span id="tagDosen3-label" class="property-label"><g:message code="penelitian.tagDosen3.label" default="Tag Dosen3" /></span>
-					
-						<span class="property-value" aria-labelledby="tagDosen3-label"><g:link controller="dosen" action="show" id="${penelitianInstance?.tagDosen3?.id}">${penelitianInstance?.tagDosen3?.encodeAsHTML()}</g:link></span>
+						<g:each in="${penelitianInstance.dosens}" var="d">
+						<span class="property-value" aria-labelledby="dosens-label"><g:link controller="dosen" action="show" id="${d.id}">${d?.encodeAsHTML()}</g:link></span>
+						</g:each>
 					
 				</li>
 				</g:if>

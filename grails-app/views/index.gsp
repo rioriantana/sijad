@@ -106,26 +106,18 @@
 			</div>
 
 <%
-<<<<<<< HEAD
-def myDailyActivitiesColumns = [['string', 'Task'], ['number', 'Hours per Day']]
-def myDailyActivitiesData = [['Work', 11], ['Eat', 2], ['Commute', 2], ['Watch TV', 2], ['Sleep', 7]]
-def defineDataTypeOfVariables = [['string', 'Task'], ['number', 'Total Sales($)'], ['number', 'Total Revenue($)']]
-def salesExpenses = [ ['2004', '10000', '6000'],['2005', '8000', '5000'],['2006', '12500', '9000'],['2007', '15500', '12000']]
-%>
 
-<gvisualization:pieCoreChart elementId="piechart" title="My Daily Activities" width="${450}" height="${300}"
-columns="${myDailyActivitiesColumns}" data="${myDailyActivitiesData}" />
-<div id="piechart"></div>
-<gvisualization:columnCoreChart elementId="barchart"   hAxis= "${new Expando([slantedTextAngle:'180',textStyle:new Expando(color:'black', fontName:'Arial', fontSize:14)])}"  bar= "${new Expando(groupWidth:'40%')}" chartArea="${new Expando(top:70, width:'100%' , height:'60%', left:50,bottom:150)}" title="Company Performance"  titleTextStyle="${ new Expando([color:'black', fontName:'Arial', fontSize:14])}" width="${700}" height="${400}" columns="${defineDataTypeOfVariables}" data="${salesExpenses}" />
- 
-<div id="barchart"></div>
-                    
-=======
 		def defineDataTypeOfVariables = [['string', 'Task'], ['number', 'Pengabdian Masyarakat'], ['number', 'Jurnal'], ['number', 'Penelitian'], ['number', 'Prosiding']]
 		def salesExpenses = [ ['2012', '100', '60', '200', '65'],['2013', '80', '50', '85', '59'],['2014', '125', '90', '112', '91'],['2015', '155', '120', '130', '95']]
 		def judulJurnal = [['string', 'Task'], ['number', 'Persentase']]
 		def dataDosenJurnal = [['Iwan Yahya', 30],['Nuryani', 24],['Suparmi',15],['Ahmad Marzuki', 21]]
-       %>
+       
+%>
+<gvisualization:columnCoreChart elementId="barchart"   hAxis= "${new Expando([slantedTextAngle:'180',textStyle:new Expando(color:'black', fontName:'Arial', fontSize:14)])}"  bar= "${new Expando(groupWidth:'40%')}" chartArea="${new Expando(top:70, width:'100%' , height:'60%', left:50,bottom:150)}" title="Company Performance"  titleTextStyle="${ new Expando([color:'black', fontName:'Arial', fontSize:14])}" width="${700}" height="${400}" columns="${defineDataTypeOfVariables}" data="${salesExpenses}" />
+ 
+<div id="barchart"></div>
+                    
+
 
       <gvisualization:columnCoreChart elementId="barchart"   hAxis= "${new Expando([slantedTextAngle:'180',textStyle:new Expando(color:'black', fontName:'Arial', fontSize:14)])}"  bar= "${new Expando(groupWidth:'80%')}" chartArea="${new Expando(top:70, width:'100%' , height:'60%', left:150,bottom:150)}" title="Prestasi Dosen 4 Tahun Terahir"  titleTextStyle="${ new Expando([color:'black', fontName:'Arial', fontSize:14])}" width="${900}" height="${400}" columns="${defineDataTypeOfVariables}" data="${salesExpenses}" />
  
@@ -157,7 +149,7 @@ columns="${myDailyActivitiesColumns}" data="${myDailyActivitiesData}" />
 		</tr>
 		</table>
 
->>>>>>> b942b6c63f95b97d0a7bf15d85969cdc193360d4
+
 		</div>
 	</body>
 </html>

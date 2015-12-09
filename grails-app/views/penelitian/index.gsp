@@ -34,7 +34,7 @@
 					
 						<g:sortableColumn property="namaKetua" title="${message(code: 'penelitian.namaKetua.label', default: 'Nama Ketua')}" />
 					
-						<g:sortableColumn property="namaAnggota1" title="${message(code: 'penelitian.namaAnggota1.label', default: 'Nama Anggota1')}" />
+						<g:sortableColumn property="namaAnggota" title="${message(code: 'penelitian.namaAnggota.label', default: 'Nama Anggota')}" />
 					
 					</tr>
 				</thead>
@@ -52,7 +52,7 @@
 					
 						<td>${fieldValue(bean: penelitianInstance, field: "namaKetua")}</td>
 					
-						<td>${fieldValue(bean: penelitianInstance, field: "namaAnggota1")}</td>
+						<td>${fieldValue(bean: penelitianInstance, field: "namaAnggota")}</td>
 					
 					</tr>
 				</g:each>

@@ -47,40 +47,21 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: pengabdianMasyarakatInstance, field: 'namaAnggota1', 'error')} ">
-	<label for="namaAnggota1">
-		<g:message code="pengabdianMasyarakat.namaAnggota1.label" default="Nama Anggota1" />
+<div class="fieldcontain ${hasErrors(bean: pengabdianMasyarakatInstance, field: 'namaAnggota', 'error')} ">
+	<label for="namaAnggota">
+		<g:message code="pengabdianMasyarakat.namaAnggota.label" default="Nama Anggota" />
 		
 	</label>
-	<g:textField name="namaAnggota1" value="${pengabdianMasyarakatInstance?.namaAnggota1}"/>
+	<g:textField name="namaAnggota" value="${pengabdianMasyarakatInstance?.namaAnggota}"/>
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: pengabdianMasyarakatInstance, field: 'namaAnggota2', 'error')} ">
-	<label for="namaAnggota2">
-		<g:message code="pengabdianMasyarakat.namaAnggota2.label" default="Nama Anggota2" />
+<div class="fieldcontain ${hasErrors(bean: pengabdianMasyarakatInstance, field: 'dosens', 'error')} ">
+	<label for="dosens">
+		<g:message code="pengabdianMasyarakat.dosens.label" default="Dosens" />
 		
 	</label>
-	<g:textField name="namaAnggota2" value="${pengabdianMasyarakatInstance?.namaAnggota2}"/>
-
-</div>
-
-
-<div class="fieldcontain ${hasErrors(bean: pengabdianMasyarakatInstance, field: 'tagDosen2', 'error')} ">
-	<label for="tagDosen2">
-		<g:message code="pengabdianMasyarakat.tagDosen2.label" default="Tandai Dosen" />
-		
-	</label>
-	<g:select id="tagDosen2" name="tagDosen2.id" from="${sijad.Dosen.list()}" optionKey="id" value="${pengabdianMasyarakatInstance?.tagDosen2?.id}" class="many-to-one" noSelection="['null': '']"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: pengabdianMasyarakatInstance, field: 'tagDosen3', 'error')} ">
-	<label for="tagDosen3">
-		<g:message code="pengabdianMasyarakat.tagDosen3.label" default="Tandai Dosen" />
-		
-	</label>
-	<g:select id="tagDosen3" name="tagDosen3.id" from="${sijad.Dosen.list()}" optionKey="id" value="${pengabdianMasyarakatInstance?.tagDosen3?.id}" class="many-to-one" noSelection="['null': '']"/>
+	<g:select name="dosens" from="${sijad.Dosen.list()}" multiple="multiple" optionKey="id" size="5" value="${pengabdianMasyarakatInstance?.dosens*.id}" class="many-to-many"/>
 
 </div>
 

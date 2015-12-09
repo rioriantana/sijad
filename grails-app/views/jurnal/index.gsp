@@ -30,11 +30,11 @@
 					
 						<g:sortableColumn property="kategoriJurnal" title="${message(code: 'jurnal.kategoriJurnal.label', default: 'Kategori Jurnal')}" />
 					
-						<g:sortableColumn property="namaKetua" title="${message(code: 'jurnal.namaKetua.label', default: 'Nama Ketua')}" />
+						<g:sortableColumn property="namaPenulis" title="${message(code: 'jurnal.namaPenulis.label', default: 'Nama Penulis')}" />
 					
-						<g:sortableColumn property="namaAnggota1" title="${message(code: 'jurnal.namaAnggota1.label', default: 'Nama Anggota1')}" />
+						<g:sortableColumn property="tahun" title="${message(code: 'jurnal.tahun.label', default: 'Tahun')}" />
 					
-						<g:sortableColumn property="namaAnggota2" title="${message(code: 'jurnal.namaAnggota2.label', default: 'Nama Anggota2')}" />
+						<g:sortableColumn property="volume" title="${message(code: 'jurnal.volume.label', default: 'Volume')}" />
 					
 					</tr>
 				</thead>
@@ -48,11 +48,11 @@
 					
 						<td>${fieldValue(bean: jurnalInstance, field: "kategoriJurnal")}</td>
 					
-						<td>${fieldValue(bean: jurnalInstance, field: "namaKetua")}</td>
+						<td>${fieldValue(bean: jurnalInstance, field: "namaPenulis")}</td>
 					
-						<td>${fieldValue(bean: jurnalInstance, field: "namaAnggota1")}</td>
+						<td>${fieldValue(bean: jurnalInstance, field: "tahun")}</td>
 					
-						<td>${fieldValue(bean: jurnalInstance, field: "namaAnggota2")}</td>
+						<td>${fieldValue(bean: jurnalInstance, field: "volume")}</td>
 					
 					</tr>
 				</g:each>

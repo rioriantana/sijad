@@ -29,30 +29,12 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: jurnalInstance, field: 'namaKetua', 'error')} ">
-	<label for="namaKetua">
-		<g:message code="jurnal.namaKetua.label" default="Nama Ketua" />
+<div class="fieldcontain ${hasErrors(bean: jurnalInstance, field: 'namaPenulis', 'error')} ">
+	<label for="namaPenulis">
+		<g:message code="jurnal.namaPenulis.label" default="Nama Penulis" />
 		
 	</label>
-	<g:textField name="namaKetua" value="${jurnalInstance?.namaKetua}"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: jurnalInstance, field: 'namaAnggota1', 'error')} ">
-	<label for="namaAnggota1">
-		<g:message code="jurnal.namaAnggota1.label" default="Nama Anggota1" />
-		
-	</label>
-	<g:textField name="namaAnggota1" value="${jurnalInstance?.namaAnggota1}"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: jurnalInstance, field: 'namaAnggota2', 'error')} ">
-	<label for="namaAnggota2">
-		<g:message code="jurnal.namaAnggota2.label" default="Nama Anggota2" />
-		
-	</label>
-	<g:textField name="namaAnggota2" value="${jurnalInstance?.namaAnggota2}"/>
+	<g:textField name="namaPenulis" value="${jurnalInstance?.namaPenulis}"/>
 
 </div>
 
@@ -92,25 +74,6 @@
 
 </div>
 
-
-<div class="fieldcontain ${hasErrors(bean: jurnalInstance, field: 'tagDosen2', 'error')} ">
-	<label for="tagDosen2">
-		<g:message code="jurnal.tagDosen2.label" default="Tandai Dosen" />
-		
-	</label>
-	<g:select id="tagDosen2" name="tagDosen2.id" from="${sijad.Dosen.list()}" optionKey="id" value="${jurnalInstance?.tagDosen2?.id}" class="many-to-one" noSelection="['null': '']"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: jurnalInstance, field: 'tagDosen3', 'error')} ">
-	<label for="tagDosen3">
-		<g:message code="jurnal.tagDosen3.label" default="Tandai Dosen" />
-		
-	</label>
-	<g:select id="tagDosen3" name="tagDosen3.id" from="${sijad.Dosen.list()}" optionKey="id" value="${jurnalInstance?.tagDosen3?.id}" class="many-to-one" noSelection="['null': '']"/>
-
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: jurnalInstance, field: 'alamatWebJurnal', 'error')} ">
 	<label for="alamatWebJurnal">
 		<g:message code="jurnal.alamatWebJurnal.label" default="Alamat Web Jurnal" />
@@ -120,12 +83,12 @@
 
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: jurnalInstance, field: 'dosens', 'error')} ">
+	<label for="dosens">
+		<g:message code="jurnal.dosens.label" default="Dosens" />
+		
+	</label>
+	<g:select name="dosens" from="${sijad.Dosen.list()}" multiple="multiple" optionKey="id" size="5" value="${jurnalInstance?.dosens*.id}" class="many-to-many"/>
 
-			
-			<div class="fieldcontain ${hasErrors(bean: jurnalInstance, field: 'alamatWebJurnal', 'error')} ">
-			<label for="alamatWebJurnal">		
-				</label>
-				<g:each in="${dosenInstance}" var="dosen">
-					${dosen} <g:checkBox name="myCheckbox" checked="false" value="${fieldValue(bean: dosenInstance, field:"id")}" />
-				</g:each>
-			</div>
+</div>
+

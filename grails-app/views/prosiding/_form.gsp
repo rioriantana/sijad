@@ -29,30 +29,12 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: prosidingInstance, field: 'namaKetua', 'error')} ">
-	<label for="namaKetua">
-		<g:message code="prosiding.namaKetua.label" default="Nama Ketua" />
+<div class="fieldcontain ${hasErrors(bean: prosidingInstance, field: 'namaAnggota', 'error')} ">
+	<label for="namaAnggota">
+		<g:message code="prosiding.namaAnggota.label" default="Nama Anggota" />
 		
 	</label>
-	<g:textField name="namaKetua" value="${prosidingInstance?.namaKetua}"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: prosidingInstance, field: 'namaAnggota1', 'error')} ">
-	<label for="namaAnggota1">
-		<g:message code="prosiding.namaAnggota1.label" default="Nama Anggota1" />
-		
-	</label>
-	<g:textField name="namaAnggota1" value="${prosidingInstance?.namaAnggota1}"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: prosidingInstance, field: 'namaAnggota2', 'error')} ">
-	<label for="namaAnggota2">
-		<g:message code="prosiding.namaAnggota2.label" default="Nama Anggota2" />
-		
-	</label>
-	<g:textField name="namaAnggota2" value="${prosidingInstance?.namaAnggota2}"/>
+	<g:textField name="namaAnggota" value="${prosidingInstance?.namaAnggota}"/>
 
 </div>
 
@@ -74,31 +56,21 @@
 
 </div>
 
-
-<div class="fieldcontain ${hasErrors(bean: prosidingInstance, field: 'tagDosen2', 'error')} ">
-	<label for="tagDosen2">
-		<g:message code="prosiding.tagDosen2.label" default="Tandai Dosen" />
-		
-	</label>
-	<g:select id="tagDosen2" name="tagDosen2.id" from="${sijad.Dosen.list()}" optionKey="id" value="${prosidingInstance?.tagDosen2?.id}" class="many-to-one" noSelection="['null': '']"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: prosidingInstance, field: 'tagDosen3', 'error')} ">
-	<label for="tagDosen3">
-		<g:message code="prosiding.tagDosen3.label" default="Tandai Dosen" />
-		
-	</label>
-	<g:select id="tagDosen3" name="tagDosen3.id" from="${sijad.Dosen.list()}" optionKey="id" value="${prosidingInstance?.tagDosen3?.id}" class="many-to-one" noSelection="['null': '']"/>
-
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: prosidingInstance, field: 'alamatWebProsiding', 'error')} ">
 	<label for="alamatWebProsiding">
 		<g:message code="prosiding.alamatWebProsiding.label" default="Alamat Web Prosiding" />
 		
 	</label>
 	<g:textField name="alamatWebProsiding" value="${prosidingInstance?.alamatWebProsiding}"/>
+
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: prosidingInstance, field: 'dosens', 'error')} ">
+	<label for="dosens">
+		<g:message code="prosiding.dosens.label" default="Dosens" />
+		
+	</label>
+	<g:select name="dosens" from="${sijad.Dosen.list()}" multiple="multiple" optionKey="id" size="5" value="${prosidingInstance?.dosens*.id}" class="many-to-many"/>
 
 </div>
 

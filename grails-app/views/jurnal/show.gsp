@@ -50,29 +50,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${jurnalInstance?.namaKetua}">
+				<g:if test="${jurnalInstance?.namaPenulis}">
 				<li class="fieldcontain">
-					<span id="namaKetua-label" class="property-label"><g:message code="jurnal.namaKetua.label" default="Nama Ketua" /></span>
+					<span id="namaPenulis-label" class="property-label"><g:message code="jurnal.namaPenulis.label" default="Nama Penulis" /></span>
 					
-						<span class="property-value" aria-labelledby="namaKetua-label"><g:fieldValue bean="${jurnalInstance}" field="namaKetua"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${jurnalInstance?.namaAnggota1}">
-				<li class="fieldcontain">
-					<span id="namaAnggota1-label" class="property-label"><g:message code="jurnal.namaAnggota1.label" default="Nama Anggota1" /></span>
-					
-						<span class="property-value" aria-labelledby="namaAnggota1-label"><g:fieldValue bean="${jurnalInstance}" field="namaAnggota1"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${jurnalInstance?.namaAnggota2}">
-				<li class="fieldcontain">
-					<span id="namaAnggota2-label" class="property-label"><g:message code="jurnal.namaAnggota2.label" default="Nama Anggota2" /></span>
-					
-						<span class="property-value" aria-labelledby="namaAnggota2-label"><g:fieldValue bean="${jurnalInstance}" field="namaAnggota2"/></span>
+						<span class="property-value" aria-labelledby="namaPenulis-label"><g:fieldValue bean="${jurnalInstance}" field="namaPenulis"/></span>
 					
 				</li>
 				</g:if>
@@ -113,38 +95,22 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${jurnalInstance?.tagDosen1}">
-				<li class="fieldcontain">
-					<span id="tagDosen1-label" class="property-label"><g:message code="jurnal.tagDosen1.label" default="Tag Dosen1" /></span>
-					
-						<span class="property-value" aria-labelledby="tagDosen1-label"><g:link controller="dosen" action="show" id="${jurnalInstance?.tagDosen1?.id}">${jurnalInstance?.tagDosen1?.encodeAsHTML()}</g:link></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${jurnalInstance?.tagDosen2}">
-				<li class="fieldcontain">
-					<span id="tagDosen2-label" class="property-label"><g:message code="jurnal.tagDosen2.label" default="Tag Dosen2" /></span>
-					
-						<span class="property-value" aria-labelledby="tagDosen2-label"><g:link controller="dosen" action="show" id="${jurnalInstance?.tagDosen2?.id}">${jurnalInstance?.tagDosen2?.encodeAsHTML()}</g:link></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${jurnalInstance?.tagDosen3}">
-				<li class="fieldcontain">
-					<span id="tagDosen3-label" class="property-label"><g:message code="jurnal.tagDosen3.label" default="Tag Dosen3" /></span>
-					
-						<span class="property-value" aria-labelledby="tagDosen3-label"><g:link controller="dosen" action="show" id="${jurnalInstance?.tagDosen3?.id}">${jurnalInstance?.tagDosen3?.encodeAsHTML()}</g:link></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${jurnalInstance?.alamatWebJurnal}">
 				<li class="fieldcontain">
 					<span id="alamatWebJurnal-label" class="property-label"><g:message code="jurnal.alamatWebJurnal.label" default="Alamat Web Jurnal" /></span>
 					
 						<span class="property-value" aria-labelledby="alamatWebJurnal-label"><g:fieldValue bean="${jurnalInstance}" field="alamatWebJurnal"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${jurnalInstance?.dosens}">
+				<li class="fieldcontain">
+					<span id="dosens-label" class="property-label"><g:message code="jurnal.dosens.label" default="Dosens" /></span>
+					
+						<g:each in="${jurnalInstance.dosens}" var="d">
+						<span class="property-value" aria-labelledby="dosens-label"><g:link controller="dosen" action="show" id="${d.id}">${d?.encodeAsHTML()}</g:link></span>
+						</g:each>
 					
 				</li>
 				</g:if>

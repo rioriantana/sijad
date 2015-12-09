@@ -30,11 +30,11 @@
 					
 						<g:sortableColumn property="kategoriConference" title="${message(code: 'prosiding.kategoriConference.label', default: 'Kategori Conference')}" />
 					
-						<g:sortableColumn property="namaKetua" title="${message(code: 'prosiding.namaKetua.label', default: 'Nama Ketua')}" />
+						<g:sortableColumn property="namaAnggota" title="${message(code: 'prosiding.namaAnggota.label', default: 'Nama Anggota')}" />
 					
-						<g:sortableColumn property="namaAnggota1" title="${message(code: 'prosiding.namaAnggota1.label', default: 'Nama Anggota1')}" />
+						<g:sortableColumn property="tahun" title="${message(code: 'prosiding.tahun.label', default: 'Tahun')}" />
 					
-						<g:sortableColumn property="namaAnggota2" title="${message(code: 'prosiding.namaAnggota2.label', default: 'Nama Anggota2')}" />
+						<g:sortableColumn property="halaman" title="${message(code: 'prosiding.halaman.label', default: 'Halaman')}" />
 					
 					</tr>
 				</thead>
@@ -48,11 +48,11 @@
 					
 						<td>${fieldValue(bean: prosidingInstance, field: "kategoriConference")}</td>
 					
-						<td>${fieldValue(bean: prosidingInstance, field: "namaKetua")}</td>
+						<td>${fieldValue(bean: prosidingInstance, field: "namaAnggota")}</td>
 					
-						<td>${fieldValue(bean: prosidingInstance, field: "namaAnggota1")}</td>
+						<td>${fieldValue(bean: prosidingInstance, field: "tahun")}</td>
 					
-						<td>${fieldValue(bean: prosidingInstance, field: "namaAnggota2")}</td>
+						<td>${fieldValue(bean: prosidingInstance, field: "halaman")}</td>
 					
 					</tr>
 				</g:each>

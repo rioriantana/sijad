@@ -12,10 +12,21 @@ class PenelitianController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
+        params.offset = params.offset ? params.offset.toInteger() : 0
         def dosen = Dosen.get(session.user)
-        def penelitianInstance = Penelitian.findAllByTagDosen1OrTagDosen2OrTagDosen3(dosen, dosen, dosen, params)
-        def penelitianInstanceCount = Penelitian.countByTagDosen1OrTagDosen2OrTagDosen3(dosen, dosen, dosen, params)
-        [penelitianInstanceList: penelitianInstance, penelitianInstanceCount: penelitianInstanceCount]
+        List penelitians = Penelitian.createCriteria().list{
+            dosens{
+            eq('nama', dosen.nama)
+            } 
+            maxResults(params.max)
+            firstResult(params.offset)
+            }   
+        def penelitiansis = Penelitian.createCriteria().count{
+            dosens{
+            eq('nama', dosen.nama)
+            }     
+            }   
+        [penelitianInstanceList: penelitians, penelitianInstanceCount: penelitiansis ]
     }
 
     def show(Penelitian penelitianInstance) {
@@ -64,8 +75,7 @@ class PenelitianController {
             respond penelitianInstance.errors, view:'edit'
             return
         }
-        def dosen = Dosen.get(session.user)
-        penelitianInstance.tagDosen1 = dosen
+
         penelitianInstance.save flush:true
 
         request.withFormat {
