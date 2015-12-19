@@ -123,4 +123,8 @@ class DosenController {
         }
     }
 
+    def fsJson(){
+        def oke = Dosen.list()
+        render oke as JSON
+    }
 }
