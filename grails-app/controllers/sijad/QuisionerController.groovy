@@ -35,6 +35,7 @@ class QuisionerController {
             return
         }
 
+        quisionerInstance.tanggal = new Date()
         quisionerInstance.save flush:true
 
         request.withFormat {

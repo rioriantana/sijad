@@ -31,190 +31,261 @@
 
 <div class="fieldcontain ${hasErrors(bean: quisionerInstance, field: 'p1', 'error')} ">
 	<label for="p1">
-		<g:message code="quisioner.p1.label" default="P1" />
+		<g:message code="quisioner.p1.label" default="Dosen memberikan silabi materi yang akan diajarkan" />
 		
 	</label>
-	<g:textField name="p1" value="${quisionerInstance?.p1}"/>
+	<g:radio name="p1" value="1" checked="true"/> 1
+	<g:radio name="p1" value="2"/>2
+	<g:radio name="p1" value="3"/>3
+	<g:radio name="p1" value="4"/>4
+	<g:radio name="p1" value="5"/>5
 
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: quisionerInstance, field: 'p2', 'error')} ">
 	<label for="p2">
-		<g:message code="quisioner.p2.label" default="P2" />
+		<g:message code="quisioner.p2.label" default="Dosen memberikan manfaat terhadap materi yang diajarkan" />
 		
 	</label>
-	<g:textField name="p2" value="${quisionerInstance?.p2}"/>
+	<g:radio name="p2" value="1" checked="true"/> 1
+	<g:radio name="p2" value="2"/>2
+	<g:radio name="p2" value="3"/>3
+	<g:radio name="p2" value="4"/>4
+	<g:radio name="p2" value="5"/>5
 
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: quisionerInstance, field: 'p3', 'error')} ">
 	<label for="p3">
-		<g:message code="quisioner.p3.label" default="P3" />
+		<g:message code="quisioner.p3.label" default="Dosen mempunyai rancangan perkuliahan, test dan tugas-tugas yang akan diberikan" />
 		
 	</label>
-	<g:textField name="p3" value="${quisionerInstance?.p3}"/>
+	<g:radio name="p3" value="1" checked="true"/> 1
+	<g:radio name="p3" value="2"/>2
+	<g:radio name="p3" value="3"/>3
+	<g:radio name="p3" value="4"/>4
+	<g:radio name="p3" value="5"/>5
 
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: quisionerInstance, field: 'p4', 'error')} ">
 	<label for="p4">
-		<g:message code="quisioner.p4.label" default="P4" />
+		<g:message code="quisioner.p4.label" default="Dosen menyampaikan rencana penilaian(bobot nilai)" />
 		
 	</label>
-	<g:textField name="p4" value="${quisionerInstance?.p4}"/>
+	<g:radio name="p4" value="1" checked="true"/> 1
+	<g:radio name="p4" value="2"/>2
+	<g:radio name="p4" value="3"/>3
+	<g:radio name="p4" value="4"/>4
+	<g:radio name="p4" value="5"/>5
 
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: quisionerInstance, field: 'p5', 'error')} ">
 	<label for="p5">
-		<g:message code="quisioner.p5.label" default="P5" />
+		<g:message code="quisioner.p5.label" default="Sumber belajar yang ditunjuk mudah untuk ditemukan" />
 		
 	</label>
-	<g:textField name="p5" value="${quisionerInstance?.p5}"/>
+	<g:radio name="p5" value="1" checked="true"/> 1
+	<g:radio name="p5" value="2"/>2
+	<g:radio name="p5" value="3"/>3
+	<g:radio name="p5" value="4"/>4
+	<g:radio name="p5" value="5"/>5
 
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: quisionerInstance, field: 'p6', 'error')} ">
 	<label for="p6">
-		<g:message code="quisioner.p6.label" default="P6" />
+		<g:message code="quisioner.p6.label" default="Materi disajikan dengan bentuk yang menarik" />
 		
 	</label>
-	<g:textField name="p6" value="${quisionerInstance?.p6}"/>
+	<g:radio name="p6" value="1" checked="true"/> 1
+	<g:radio name="p6" value="2"/>2
+	<g:radio name="p6" value="3"/>3
+	<g:radio name="p6" value="4"/>4
+	<g:radio name="p6" value="5"/>5
 
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: quisionerInstance, field: 'p7', 'error')} ">
 	<label for="p7">
-		<g:message code="quisioner.p7.label" default="P7" />
+		<g:message code="quisioner.p7.label" default="Dosen memberikan garis besar materi yang harus dikuasai tiap tatap muka" />
 		
 	</label>
-	<g:textField name="p7" value="${quisionerInstance?.p7}"/>
+	<g:radio name="p7" value="1" checked="true"/> 1
+	<g:radio name="p7" value="2"/>2
+	<g:radio name="p7" value="3"/>3
+	<g:radio name="p7" value="4"/>4
+	<g:radio name="p7" value="5"/>5
 
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: quisionerInstance, field: 'p8', 'error')} ">
 	<label for="p8">
-		<g:message code="quisioner.p8.label" default="P8" />
+		<g:message code="quisioner.p8.label" default="Digunakan media yang merangsang mahasiswa untuk bertanya" />
 		
 	</label>
-	<g:textField name="p8" value="${quisionerInstance?.p8}"/>
+	<g:radio name="p8" value="1" checked="true"/> 1
+	<g:radio name="p8" value="2"/>2
+	<g:radio name="p8" value="3"/>3
+	<g:radio name="p8" value="4"/>4
+	<g:radio name="p8" value="5"/>5
 
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: quisionerInstance, field: 'p9', 'error')} ">
 	<label for="p9">
-		<g:message code="quisioner.p9.label" default="P9" />
+		<g:message code="quisioner.p9.label" default="Dosen menggunakan bahasa yang mudah dipahami mahasiswa" />
 		
 	</label>
-	<g:textField name="p9" value="${quisionerInstance?.p9}"/>
+	<g:radio name="p9" value="1" checked="true"/> 1
+	<g:radio name="p9" value="2"/>2
+	<g:radio name="p9" value="3"/>3
+	<g:radio name="p9" value="4"/>4
+	<g:radio name="p9" value="5"/>5
 
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: quisionerInstance, field: 'p10', 'error')} ">
 	<label for="p10">
-		<g:message code="quisioner.p10.label" default="P10" />
+		<g:message code="quisioner.p10.label" default="Mahasiswa diberi waktu untuk bertanya" />
 		
 	</label>
-	<g:textField name="p10" value="${quisionerInstance?.p10}"/>
+	<g:radio name="p10" value="1" checked="true"/> 1
+	<g:radio name="p10" value="2"/>2
+	<g:radio name="p10" value="3"/>3
+	<g:radio name="p10" value="4"/>4
+	<g:radio name="p10" value="5"/>5
 
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: quisionerInstance, field: 'p11', 'error')} ">
 	<label for="p11">
-		<g:message code="quisioner.p11.label" default="P11" />
+		<g:message code="quisioner.p11.label" default="Dosen memberikan waktu konsultasi diluar jam kuliah" />
 		
 	</label>
-	<g:textField name="p11" value="${quisionerInstance?.p11}"/>
+	<g:radio name="p11" value="1" checked="true"/> 1
+	<g:radio name="p11" value="2"/>2
+	<g:radio name="p11" value="3"/>3
+	<g:radio name="p11" value="4"/>4
+	<g:radio name="p11" value="5"/>5
 
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: quisionerInstance, field: 'p12', 'error')} ">
 	<label for="p12">
-		<g:message code="quisioner.p12.label" default="P12" />
+		<g:message code="quisioner.p12.label" default="Dosen tepat waktu dalam mengajar" />
 		
 	</label>
-	<g:textField name="p12" value="${quisionerInstance?.p12}"/>
+	<g:radio name="p12" value="1" checked="true"/> 1
+	<g:radio name="p12" value="2"/>2
+	<g:radio name="p12" value="3"/>3
+	<g:radio name="p12" value="4"/>4
+	<g:radio name="p12" value="5"/>5
 
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: quisionerInstance, field: 'p13', 'error')} ">
 	<label for="p13">
-		<g:message code="quisioner.p13.label" default="P13" />
+		<g:message code="quisioner.p13.label" default="Dosen selalu hadir memberikan kuliah" />
 		
 	</label>
-	<g:textField name="p13" value="${quisionerInstance?.p13}"/>
+	<g:radio name="p13" value="1" checked="true"/> 1
+	<g:radio name="p13" value="2"/>2
+	<g:radio name="p13" value="3"/>3
+	<g:radio name="p13" value="4"/>4
+	<g:radio name="p13" value="5"/>5
 
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: quisionerInstance, field: 'p14', 'error')} ">
 	<label for="p14">
-		<g:message code="quisioner.p14.label" default="P14" />
+		<g:message code="quisioner.p14.label" default="Dosen memantau kehadiran mahasiswa" />
 		
 	</label>
-	<g:textField name="p14" value="${quisionerInstance?.p14}"/>
+	<g:radio name="p14" value="1" checked="true"/> 1
+	<g:radio name="p14" value="2"/>2
+	<g:radio name="p14" value="3"/>3
+	<g:radio name="p14" value="4"/>4
+	<g:radio name="p14" value="5"/>5
 
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: quisionerInstance, field: 'p15', 'error')} ">
 	<label for="p15">
-		<g:message code="quisioner.p15.label" default="P15" />
+		<g:message code="quisioner.p15.label" default="Dosen memberi tugas yang terencana" />
 		
 	</label>
-	<g:textField name="p15" value="${quisionerInstance?.p15}"/>
+	<g:radio name="p15" value="1" checked="true"/> 1
+	<g:radio name="p15" value="2"/>2
+	<g:radio name="p15" value="3"/>3
+	<g:radio name="p15" value="4"/>4
+	<g:radio name="p15" value="5"/>5
 
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: quisionerInstance, field: 'p16', 'error')} ">
 	<label for="p16">
-		<g:message code="quisioner.p16.label" default="P16" />
+		<g:message code="quisioner.p16.label" default="Dosen memberi quis yang terencana" />
 		
 	</label>
-	<g:textField name="p16" value="${quisionerInstance?.p16}"/>
+	<g:radio name="p16" value="1" checked="true"/> 1
+	<g:radio name="p16" value="2"/>2
+	<g:radio name="p16" value="3"/>3
+	<g:radio name="p16" value="4"/>4
+	<g:radio name="p16" value="5"/>5
 
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: quisionerInstance, field: 'p17', 'error')} ">
 	<label for="p17">
-		<g:message code="quisioner.p17.label" default="P17" />
+		<g:message code="quisioner.p17.label" default="Dosen memberikan umpan balik terhadap tugas / ujian yang diberikan" />
 		
 	</label>
-	<g:textField name="p17" value="${quisionerInstance?.p17}"/>
+	<g:radio name="p17" value="1" checked="true"/> 1
+	<g:radio name="p17" value="2"/>2
+	<g:radio name="p17" value="3"/>3
+	<g:radio name="p17" value="4"/>4
+	<g:radio name="p17" value="5"/>5
 
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: quisionerInstance, field: 'p18', 'error')} ">
 	<label for="p18">
-		<g:message code="quisioner.p18.label" default="P18" />
+		<g:message code="quisioner.p18.label" default="Dosen menginformasikan hasil nilai tugas / ujian" />
 		
 	</label>
-	<g:textField name="p18" value="${quisionerInstance?.p18}"/>
+	<g:radio name="p18" value="1" checked="true"/> 1
+	<g:radio name="p18" value="2"/>2
+	<g:radio name="p18" value="3"/>3
+	<g:radio name="p18" value="4"/>4
+	<g:radio name="p18" value="5"/>5
 
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: quisionerInstance, field: 'p19', 'error')} ">
 	<label for="p19">
-		<g:message code="quisioner.p19.label" default="P19" />
+		<g:message code="quisioner.p19.label" default="Dosen memberikan materi silabi" />
 		
 	</label>
-	<g:textField name="p19" value="${quisionerInstance?.p19}"/>
+	<g:radio name="p19" value="1" checked="true"/> 1
+	<g:radio name="p19" value="2"/>2
+	<g:radio name="p19" value="3"/>3
+	<g:radio name="p19" value="4"/>4
+	<g:radio name="p19" value="5"/>5
 
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: quisionerInstance, field: 'p20', 'error')} ">
 	<label for="p20">
-		<g:message code="quisioner.p20.label" default="P20" />
+		<g:message code="quisioner.p20.label" default="Dosen menepati rancangan perkuliahan yang telah disusun" />
 		
 	</label>
-	<g:textField name="p20" value="${quisionerInstance?.p20}"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: quisionerInstance, field: 'tanggal', 'error')} ">
-	<label for="tanggal">
-		<g:message code="quisioner.tanggal.label" default="Tanggal" />
-		
-	</label>
-	<g:datePicker name="tanggal" precision="day"  value="${quisionerInstance?.tanggal}" default="none" noSelection="['': '']" />
+	<g:radio name="p20" value="1" checked="true"/> 1
+	<g:radio name="p20" value="2"/>2
+	<g:radio name="p20" value="3"/>3
+	<g:radio name="p20" value="4"/>4
+	<g:radio name="p20" value="5"/>5
 
 </div>
 
