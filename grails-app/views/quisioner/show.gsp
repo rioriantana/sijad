@@ -52,7 +52,7 @@
 			
 				<g:if test="${quisionerInstance?.p1}">
 				<li class="fieldcontain">
-					<span id="p1-label" class="property-label"><g:message code="quisioner.p1.label" default="P1" /></span>
+					<span id="p1-label" class="property-label"><g:message code="quisioner.p1.label" default="Dosen memberikan silabi materi yang akan diajarkan" /></span>
 					
 						<span class="property-value" aria-labelledby="p1-label"><g:fieldValue bean="${quisionerInstance}" field="p1"/></span>
 					
@@ -61,7 +61,7 @@
 			
 				<g:if test="${quisionerInstance?.p2}">
 				<li class="fieldcontain">
-					<span id="p2-label" class="property-label"><g:message code="quisioner.p2.label" default="P2" /></span>
+					<span id="p2-label" class="property-label"><g:message code="quisioner.p2.label" default="Dosen memberikan manfaat terhadap materi yang diajarkan" /></span>
 					
 						<span class="property-value" aria-labelledby="p2-label"><g:fieldValue bean="${quisionerInstance}" field="p2"/></span>
 					
@@ -70,7 +70,7 @@
 			
 				<g:if test="${quisionerInstance?.p3}">
 				<li class="fieldcontain">
-					<span id="p3-label" class="property-label"><g:message code="quisioner.p3.label" default="P3" /></span>
+					<span id="p3-label" class="property-label"><g:message code="quisioner.p3.label" default="Dosen mempunyai rancangan perkuliahan, test dan tugas-tugas yang akan diberikan" /></span>
 					
 						<span class="property-value" aria-labelledby="p3-label"><g:fieldValue bean="${quisionerInstance}" field="p3"/></span>
 					
@@ -79,7 +79,7 @@
 			
 				<g:if test="${quisionerInstance?.p4}">
 				<li class="fieldcontain">
-					<span id="p4-label" class="property-label"><g:message code="quisioner.p4.label" default="P4" /></span>
+					<span id="p4-label" class="property-label"><g:message code="quisioner.p4.label" default="Dosen menyampaikan rencana penilaian(bobot nilai)" /></span>
 					
 						<span class="property-value" aria-labelledby="p4-label"><g:fieldValue bean="${quisionerInstance}" field="p4"/></span>
 					
@@ -88,7 +88,7 @@
 			
 				<g:if test="${quisionerInstance?.p5}">
 				<li class="fieldcontain">
-					<span id="p5-label" class="property-label"><g:message code="quisioner.p5.label" default="P5" /></span>
+					<span id="p5-label" class="property-label"><g:message code="quisioner.p5.label" default="Sumber belajar yang ditunjuk mudah untuk ditemukan" /></span>
 					
 						<span class="property-value" aria-labelledby="p5-label"><g:fieldValue bean="${quisionerInstance}" field="p5"/></span>
 					
@@ -97,7 +97,7 @@
 			
 				<g:if test="${quisionerInstance?.p6}">
 				<li class="fieldcontain">
-					<span id="p6-label" class="property-label"><g:message code="quisioner.p6.label" default="P6" /></span>
+					<span id="p6-label" class="property-label"><g:message code="quisioner.p6.label" default="Materi disajikan dengan bentuk yang menarik" /></span>
 					
 						<span class="property-value" aria-labelledby="p6-label"><g:fieldValue bean="${quisionerInstance}" field="p6"/></span>
 					
@@ -106,7 +106,7 @@
 			
 				<g:if test="${quisionerInstance?.p7}">
 				<li class="fieldcontain">
-					<span id="p7-label" class="property-label"><g:message code="quisioner.p7.label" default="P7" /></span>
+					<span id="p7-label" class="property-label"><g:message code="quisioner.p7.label" default="Dosen memberikan garis besar materi yang harus dikuasai tiap tatap muka" /></span>
 					
 						<span class="property-value" aria-labelledby="p7-label"><g:fieldValue bean="${quisionerInstance}" field="p7"/></span>
 					
@@ -115,7 +115,7 @@
 			
 				<g:if test="${quisionerInstance?.p8}">
 				<li class="fieldcontain">
-					<span id="p8-label" class="property-label"><g:message code="quisioner.p8.label" default="P8" /></span>
+					<span id="p8-label" class="property-label"><g:message code="quisioner.p8.label" default="Digunakan media yang merangsang mahasiswa untuk bertanya" /></span>
 					
 						<span class="property-value" aria-labelledby="p8-label"><g:fieldValue bean="${quisionerInstance}" field="p8"/></span>
 					
@@ -124,7 +124,7 @@
 			
 				<g:if test="${quisionerInstance?.p9}">
 				<li class="fieldcontain">
-					<span id="p9-label" class="property-label"><g:message code="quisioner.p9.label" default="P9" /></span>
+					<span id="p9-label" class="property-label"><g:message code="quisioner.p9.label" default="Dosen menggunakan bahasa yang mudah dipahami mahasiswa" /></span>
 					
 						<span class="property-value" aria-labelledby="p9-label"><g:fieldValue bean="${quisionerInstance}" field="p9"/></span>
 					
@@ -133,7 +133,7 @@
 			
 				<g:if test="${quisionerInstance?.p10}">
 				<li class="fieldcontain">
-					<span id="p10-label" class="property-label"><g:message code="quisioner.p10.label" default="P10" /></span>
+					<span id="p10-label" class="property-label"><g:message code="quisioner.p10.label" default="Mahasiswa diberi waktu untuk bertanya" /></span>
 					
 						<span class="property-value" aria-labelledby="p10-label"><g:fieldValue bean="${quisionerInstance}" field="p10"/></span>
 					
@@ -142,7 +142,7 @@
 			
 				<g:if test="${quisionerInstance?.p11}">
 				<li class="fieldcontain">
-					<span id="p11-label" class="property-label"><g:message code="quisioner.p11.label" default="P11" /></span>
+					<span id="p11-label" class="property-label"><g:message code="quisioner.p11.label" default="Dosen memberikan waktu konsultasi diluar jam kuliah" /></span>
 					
 						<span class="property-value" aria-labelledby="p11-label"><g:fieldValue bean="${quisionerInstance}" field="p11"/></span>
 					
@@ -151,7 +151,7 @@
 			
 				<g:if test="${quisionerInstance?.p12}">
 				<li class="fieldcontain">
-					<span id="p12-label" class="property-label"><g:message code="quisioner.p12.label" default="P12" /></span>
+					<span id="p12-label" class="property-label"><g:message code="quisioner.p12.label" default="Dosen tepat waktu dalam mengajar" /></span>
 					
 						<span class="property-value" aria-labelledby="p12-label"><g:fieldValue bean="${quisionerInstance}" field="p12"/></span>
 					
@@ -160,7 +160,7 @@
 			
 				<g:if test="${quisionerInstance?.p13}">
 				<li class="fieldcontain">
-					<span id="p13-label" class="property-label"><g:message code="quisioner.p13.label" default="P13" /></span>
+					<span id="p13-label" class="property-label"><g:message code="quisioner.p13.label" default="Dosen selalu hadir memberikan kuliah" /></span>
 					
 						<span class="property-value" aria-labelledby="p13-label"><g:fieldValue bean="${quisionerInstance}" field="p13"/></span>
 					
@@ -169,7 +169,7 @@
 			
 				<g:if test="${quisionerInstance?.p14}">
 				<li class="fieldcontain">
-					<span id="p14-label" class="property-label"><g:message code="quisioner.p14.label" default="P14" /></span>
+					<span id="p14-label" class="property-label"><g:message code="quisioner.p14.label" default="Dosen memantau kehadiran mahasiswa" /></span>
 					
 						<span class="property-value" aria-labelledby="p14-label"><g:fieldValue bean="${quisionerInstance}" field="p14"/></span>
 					
@@ -178,7 +178,7 @@
 			
 				<g:if test="${quisionerInstance?.p15}">
 				<li class="fieldcontain">
-					<span id="p15-label" class="property-label"><g:message code="quisioner.p15.label" default="P15" /></span>
+					<span id="p15-label" class="property-label"><g:message code="quisioner.p15.label" default="Dosen memberi tugas yang terencana" /></span>
 					
 						<span class="property-value" aria-labelledby="p15-label"><g:fieldValue bean="${quisionerInstance}" field="p15"/></span>
 					
@@ -187,7 +187,7 @@
 			
 				<g:if test="${quisionerInstance?.p16}">
 				<li class="fieldcontain">
-					<span id="p16-label" class="property-label"><g:message code="quisioner.p16.label" default="P16" /></span>
+					<span id="p16-label" class="property-label"><g:message code="quisioner.p16.label" default="Dosen memberi quis yang terencana" /></span>
 					
 						<span class="property-value" aria-labelledby="p16-label"><g:fieldValue bean="${quisionerInstance}" field="p16"/></span>
 					
@@ -196,7 +196,7 @@
 			
 				<g:if test="${quisionerInstance?.p17}">
 				<li class="fieldcontain">
-					<span id="p17-label" class="property-label"><g:message code="quisioner.p17.label" default="P17" /></span>
+					<span id="p17-label" class="property-label"><g:message code="quisioner.p17.label" default="Dosen memberikan umpan balik terhadap tugas / ujian yang diberikan" /></span>
 					
 						<span class="property-value" aria-labelledby="p17-label"><g:fieldValue bean="${quisionerInstance}" field="p17"/></span>
 					
@@ -205,7 +205,7 @@
 			
 				<g:if test="${quisionerInstance?.p18}">
 				<li class="fieldcontain">
-					<span id="p18-label" class="property-label"><g:message code="quisioner.p18.label" default="P18" /></span>
+					<span id="p18-label" class="property-label"><g:message code="quisioner.p18.label" default="Dosen menginformasikan hasil nilai tugas / ujian" /></span>
 					
 						<span class="property-value" aria-labelledby="p18-label"><g:fieldValue bean="${quisionerInstance}" field="p18"/></span>
 					
@@ -214,7 +214,7 @@
 			
 				<g:if test="${quisionerInstance?.p19}">
 				<li class="fieldcontain">
-					<span id="p19-label" class="property-label"><g:message code="quisioner.p19.label" default="P19" /></span>
+					<span id="p19-label" class="property-label"><g:message code="quisioner.p19.label" default="Dosen memberikan materi silabi" /></span>
 					
 						<span class="property-value" aria-labelledby="p19-label"><g:fieldValue bean="${quisionerInstance}" field="p19"/></span>
 					
@@ -223,7 +223,7 @@
 			
 				<g:if test="${quisionerInstance?.p20}">
 				<li class="fieldcontain">
-					<span id="p20-label" class="property-label"><g:message code="quisioner.p20.label" default="P20" /></span>
+					<span id="p20-label" class="property-label"><g:message code="quisioner.p20.label" default="Dosen menepati rancangan perkuliahan yang telah disusun" /></span>
 					
 						<span class="property-value" aria-labelledby="p20-label"><g:fieldValue bean="${quisionerInstance}" field="p20"/></span>
 					

@@ -11,6 +11,6 @@ class MataKuliah {
     }
 
 	public String toString(){
-    	"$kodeMakul"
+    	"$namaMakul"
     }
 }
