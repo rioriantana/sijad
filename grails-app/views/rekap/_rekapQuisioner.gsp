@@ -47,7 +47,7 @@
 </script>
 </head>
 <body>
-<h3><center>Data Quisioner Mata Kuliah Program Studi Kimia FMIPA UNS<br>
+<h3><center>Data Quisioner Mata Kuliah Program Studi Fisika FMIPA UNS<br>
 Periode Tahun Ajaran <g:formatDate format="yyyy" date="${tahunAkademik}"/> </center></h3>
 
 <table width="100%">

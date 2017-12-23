@@ -34,8 +34,7 @@
 </script>
 </head>
 <body>
-<h3><center>Data Wisuda Jurusan Fisika FMIPA UNS<br>
-Tahun Kelulusan <g:formatDate format="yyyy" date="${tahunAngkatan}"/></center></h3>
+<h3><center>Data Pubikasi Jurnal Dosen Fisika FMIPA UNS<br></center></h3>
 
 <table width="100%">
     <tr>
