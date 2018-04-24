@@ -49,13 +49,12 @@
 
 			<h2>Login</h2>
 
+	<g:form action="doLogin">
 			<div id="username_input">
 
 				<div id="username_inputleft"></div>
-	<g:form action="doLogin">
 				<div id="username_inputmiddle">
-			
-					<input type="text" name="nidn" id="url" placeholder="Username" onclick="this.value = ''">
+					<input type="text" name="nim" id="url" placeholder="NIM" onclick="this.value = ''">
 					<img id="url_user" src="${resource(dir: 'images', file: 'mailicon.png')}" alt="">
 				</div>
 
@@ -63,7 +62,7 @@
 
 			</div>
 
-			<div id="password_input">
+			<!-- <div id="password_input">
 
 				<div id="password_inputleft"></div>
 
@@ -75,7 +74,7 @@
 
 				<div id="password_inputright"></div>
 
-			</div>
+			</div> -->
 
 			<div id="submit">
 				<input type="image" src="${resource(dir: 'images', file: 'submit_hover.png')}" id="submit1" value="Sign In">
@@ -88,7 +87,7 @@
 		</div>
 
 		<div id="wrapperbottom">
-		<center><a href="loginQuisioner">Input Quisioner</a></center>	
+		<center><a href="login">Login to SIJAD</a></center>	
 		</div>
 		
 		<div id="powered">

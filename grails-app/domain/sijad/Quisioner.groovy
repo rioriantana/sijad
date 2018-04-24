@@ -25,6 +25,7 @@ class Quisioner {
 	String p19
 	String p20
 	Date tanggal
+	String nim
 
     static constraints = {
     	dosen(nullable: true)
@@ -51,5 +52,6 @@ class Quisioner {
 		p19(nullable: true)
 		p20(nullable: true)
 		tanggal(nullable: true)
+		nim(nullable: true)
     }
 }

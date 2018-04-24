@@ -19,6 +19,13 @@ class QuisionerController {
         respond quisionerInstance
     }
 
+    def list(Integer max) {
+        def tanggal = new Date().clearTime()
+        
+        params.max = Math.min(max ?: 10, 100)
+        respond Quisioner.findAllByNimAndTanggal(session.user, tanggal), model:[quisionerInstanceCount: Quisioner.countByNimAndTanggal(session.user, tanggal)]
+    }
+
     def create() {
         respond new Quisioner(params)
     }

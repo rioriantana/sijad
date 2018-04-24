@@ -27,6 +27,8 @@
 	</label>
 	<g:textField name="mhsSemester" value="${quisionerInstance?.mhsSemester}"/>
 
+	<g:field type="hidden" name="nim" value="${session.nim}"/>
+
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: quisionerInstance, field: 'p1', 'error')} ">
