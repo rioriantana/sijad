@@ -19,12 +19,22 @@ class QuisionerController {
         respond quisionerInstance
     }
 
-    def list(Integer max) {
-        def tanggal = new Date().clearTime()
-        
+  def list(Integer max) {
+        def tanggalAhir = new Date()
+        def tanggalAwal = tanggalAhir - 3
+        print tanggalAhir
         params.max = Math.min(max ?: 10, 100)
-        respond Quisioner.findAllByNimAndTanggal(session.user, tanggal), model:[quisionerInstanceCount: Quisioner.countByNimAndTanggal(session.user, tanggal)]
+        respond Quisioner.findAllByNimAndTanggalBetween(session.nim, tanggalAwal, tanggalAhir), model:[quisionerInstanceCount: Quisioner.countByNimAndTanggalBetween(session.nim, tanggalAwal, tanggalAhir)]
     }
+
+    def print(Integer max) {
+        def tanggalAhir = new Date()
+        def tanggalAwal = tanggalAhir - 3
+        print tanggalAhir
+        params.max = Math.min(max ?: 10, 100)
+        respond Quisioner.findAllByNimAndTanggalBetween(session.nim, tanggalAwal, tanggalAhir), model:[quisionerInstanceCount: Quisioner.countByNimAndTanggalBetween(session.nim, tanggalAwal, tanggalAhir)]
+    }
+
 
     def create() {
         respond new Quisioner(params)
@@ -48,7 +58,7 @@ class QuisionerController {
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.created.message', args: [message(code: 'quisioner.label', default: 'Quisioner'), quisionerInstance.id])
-                redirect quisionerInstance
+                redirect(controller:'quisioner',action:'list')
             }
             '*' { respond quisionerInstance, [status: CREATED] }
         }

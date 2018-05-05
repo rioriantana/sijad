@@ -35,7 +35,7 @@ class UserController {
 		if(params.nim){
 		session.user = "quisioner"
 		session.nim = params.nim
-		redirect(controller:'quisioner',action:'create')
+		redirect(controller:'quisioner',action:'list')
 		return
 		}
 		else{
