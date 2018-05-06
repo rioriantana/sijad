@@ -21,7 +21,28 @@
 	<!-- Load stylesheets -->
 	<link type="text/css" rel="stylesheet" href="${resource(dir: 'css', file: 'style.css')}" media="screen" />
 	<!-- // Load stylesheets -->
-	
+	<style type="text/css">
+
+		.quisioner{
+			margin-top: -30px;
+			margin-left: -170px;
+		}
+		
+		.quisioner a:link, a:visited {
+		    background-color: #f44336;
+		    color: white;
+		    padding: 10px 20px;
+		    text-align: center;
+		    text-decoration: none;
+		    display: inline-block;
+		}
+
+
+		.quisioner a:hover, a:active {
+		    background-color: red;
+		}
+
+	</style>
 <script>
 
 
@@ -40,6 +61,7 @@
 </script>
 	
 </head>
+
 <body>
 
 	<div id="wrapper">
@@ -88,7 +110,7 @@
 		</div>
 
 		<div id="wrapperbottom">
-		<center><a href="loginQuisioner">Input Quisioner</a></center>	
+		<center><div class="quisioner"><a href="loginQuisioner">Input Quisioner</a></div></center>	
 		</div>
 		
 		<div id="powered">
