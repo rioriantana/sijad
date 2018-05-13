@@ -99,6 +99,10 @@ environments {
     }
 }
 
+tomcat.deploy.username="tomcat"
+tomcat.deploy.password="tomcat1"
+tomcat.deploy.url="http://203.6.148.17:8080/manager/text"
+
 // log4j configuration
 log4j = {
     // Example of changing the log pattern for the default console appender:
