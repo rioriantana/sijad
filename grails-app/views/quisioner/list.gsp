@@ -32,6 +32,8 @@
 						<g:sortableColumn property="mhsSemester" title="${message(code: 'quisioner.mhsSemester.label', default: 'Mhs Semester')}" />
 					
 						<g:sortableColumn property="p1" title="${message(code: 'quisioner.p1.label', default: 'NIM')}" />
+
+						<g:sortableColumn property="p1" title="${message(code: 'quisioner.p1.label', default: 'Detail')}" />
 					
 					
 					</tr>
@@ -47,6 +49,8 @@
 						<td>${fieldValue(bean: quisionerInstance, field: "mhsSemester")}</td>
 					
 						<td>${fieldValue(bean: quisionerInstance, field: "nim")}</td>
+
+						<td><g:link action="show" id="${quisionerInstance.id}">Show Detail</g:link></td>
 					
 					</tr>
 				</g:each>

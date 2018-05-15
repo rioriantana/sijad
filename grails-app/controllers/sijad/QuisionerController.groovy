@@ -21,7 +21,7 @@ class QuisionerController {
 
   def list(Integer max) {
         def tanggalAhir = new Date()
-        def tanggalAwal = tanggalAhir - 3
+        def tanggalAwal = tanggalAhir - 7
         print tanggalAhir
         params.max = Math.min(max ?: 10, 100)
         respond Quisioner.findAllByNimAndTanggalBetween(session.nim, tanggalAwal, tanggalAhir), model:[quisionerInstanceCount: Quisioner.countByNimAndTanggalBetween(session.nim, tanggalAwal, tanggalAhir)]
@@ -29,7 +29,7 @@ class QuisionerController {
 
     def print(Integer max) {
         def tanggalAhir = new Date()
-        def tanggalAwal = tanggalAhir - 3
+        def tanggalAwal = tanggalAhir - 7
         print tanggalAhir
         params.max = Math.min(max ?: 10, 100)
         respond Quisioner.findAllByNimAndTanggalBetween(session.nim, tanggalAwal, tanggalAhir), model:[quisionerInstanceCount: Quisioner.countByNimAndTanggalBetween(session.nim, tanggalAwal, tanggalAhir)]
@@ -85,7 +85,7 @@ class QuisionerController {
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.updated.message', args: [message(code: 'Quisioner.label', default: 'Quisioner'), quisionerInstance.id])
-                redirect quisionerInstance
+                redirect(controller:'quisioner',action:'list')
             }
             '*'{ respond quisionerInstance, [status: OK] }
         }
@@ -104,7 +104,7 @@ class QuisionerController {
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.deleted.message', args: [message(code: 'Quisioner.label', default: 'Quisioner'), quisionerInstance.id])
-                redirect action:"index", method:"GET"
+                redirect(controller:'quisioner',action:'list')
             }
             '*'{ render status: NO_CONTENT }
         }

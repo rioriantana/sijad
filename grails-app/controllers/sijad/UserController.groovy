@@ -35,6 +35,7 @@ class UserController {
 		if(params.nim){
 		session.user = "quisioner"
 		session.nim = params.nim
+		session.role = "mahasiswa"
 		redirect(controller:'quisioner',action:'list')
 		return
 		}
@@ -42,6 +43,7 @@ class UserController {
 			def user = Dosen.findWhere(nidn:params['nidn'], password:params['password'])
 			if (user) {
 				session.user = user.id
+				session.role = user.role
 				redirect(controller:'jurnal')
 			} else{
 				redirect(controller:'user',action:'login')

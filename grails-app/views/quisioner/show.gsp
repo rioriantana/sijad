@@ -11,8 +11,8 @@
 		<a href="#show-quisioner" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div class="nav" role="navigation">
 			<ul>
-				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
+				<!-- <li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li> -->
+				<li><g:link class="list" action="list"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
 				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
 			</ul>
 		</div>
@@ -27,7 +27,7 @@
 				<li class="fieldcontain">
 					<span id="dosen-label" class="property-label"><g:message code="quisioner.dosen.label" default="Dosen" /></span>
 					
-						<span class="property-value" aria-labelledby="dosen-label"><g:link controller="dosen" action="show" id="${quisionerInstance?.dosen?.id}">${quisionerInstance?.dosen?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="dosen-label">${quisionerInstance?.dosen?.encodeAsHTML()}</span>
 					
 				</li>
 				</g:if>
@@ -36,7 +36,7 @@
 				<li class="fieldcontain">
 					<span id="mataKuliah-label" class="property-label"><g:message code="quisioner.mataKuliah.label" default="Mata Kuliah" /></span>
 					
-						<span class="property-value" aria-labelledby="mataKuliah-label"><g:link controller="mataKuliah" action="show" id="${quisionerInstance?.mataKuliah?.id}">${quisionerInstance?.mataKuliah?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="mataKuliah-label">${quisionerInstance?.mataKuliah?.encodeAsHTML()}</span>
 					
 				</li>
 				</g:if>

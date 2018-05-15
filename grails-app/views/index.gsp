@@ -93,6 +93,7 @@
 				<li><g:link class="create" controller="prosiding">Prosiding</g:link></li>
 				<li><g:link class="create" controller="penelitian">Penelitian</g:link></li>
 				<li><g:link class="create" controller="pengabdianMasyarakat">Pengabdian Masyarakat</g:link></li>
+				<li><g:link class="create" controller="rekap" action="rekapQuisioner">Rekap Quisioner</g:link></li>
 				<li><g:link class="create" controller="user" action="logout">Logout</g:link></li>
 			</ul>
 			
