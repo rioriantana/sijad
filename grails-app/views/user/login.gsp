@@ -24,8 +24,7 @@
 	<style type="text/css">
 
 		.quisioner{
-			margin-top: -30px;
-			margin-left: -170px;
+			margin: 0px auto;
 		}
 		
 		.quisioner a:link, a:visited {
@@ -70,11 +69,10 @@
 		<div id="wrappermiddle">
 
 			<h2>Login</h2>
-
+	<g:form action="doLogin">
 			<div id="username_input">
 
 				<div id="username_inputleft"></div>
-	<g:form action="doLogin">
 				<div id="username_inputmiddle">
 			
 					<input type="text" name="nidn" id="url" placeholder="Username" onclick="this.value = ''">
@@ -103,14 +101,14 @@
 				<input type="image" src="${resource(dir: 'images', file: 'submit_hover.png')}" id="submit1" value="Sign In">
 				<input type="image" src="${resource(dir: 'images', file: 'submit.png')}" id="submit2" value="Sign In">
 			</div>
-</g:form>
-
 			
+	</g:form>
+
+			<div class="quisioner"><a href="loginQuisioner">Input Quisioner</a></div>
 
 		</div>
 
 		<div id="wrapperbottom">
-		<center><div class="quisioner"><a href="loginQuisioner">Input Quisioner</a></div></center>	
 		</div>
 		
 		<div id="powered">

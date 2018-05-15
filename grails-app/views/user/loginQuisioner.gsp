@@ -24,8 +24,7 @@
 	<style type="text/css">
 
 		.quisioner{
-			margin-top: -30px;
-			margin-left: -170px;
+			margin: 0px auto;
 		}
 		
 		.quisioner a:link, a:visited {
@@ -104,11 +103,11 @@
 </g:form>
 
 			
+		<div class="quisioner"><a href="login">Login to SIJAD</a></div>	
 
 		</div>
 
 		<div id="wrapperbottom">
-		<center><div class="quisioner"><a href="login">Login to SIJAD</a></div></center>	
 		</div>
 		
 		<div id="powered">
