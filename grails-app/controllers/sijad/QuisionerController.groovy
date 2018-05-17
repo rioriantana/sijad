@@ -32,7 +32,7 @@ class QuisionerController {
         def tanggalAwal = tanggalAhir - 7
         print tanggalAhir
         params.max = Math.min(max ?: 10, 100)
-        respond Quisioner.findAllByNimAndTanggalBetween(session.nim, tanggalAwal, tanggalAhir), model:[quisionerInstanceCount: Quisioner.countByNimAndTanggalBetween(session.nim, tanggalAwal, tanggalAhir)]
+        respond Quisioner.findAllByNimAndTanggalBetween(session.nim, tanggalAwal, tanggalAhir), model:[quisionerInstanceCount: Quisioner.countByNimAndTanggalBetween(session.nim, tanggalAwal, tanggalAhir), tahunAkademik: tanggalAhir]
     }
 
 
