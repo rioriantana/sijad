@@ -47,7 +47,8 @@
 </script>
 </head>
 <body>
-<h3><center>Bukti Pengisian Quisioner Mata Kuliah Program Studi Fisika FMIPA UNS</center></h3>
+<h3><center>Bukti Pengisian Quisioner Mata Kuliah Program Studi Fisika FMIPA UNS<br>
+Periode Tahun Ajaran <g:formatDate format="yyyy" date="${tahunAkademik}"/> </center></h3>
 
 <table width="100%">
     <tr>
