@@ -1,3 +1,4 @@
+<%@ page import="sijad.Quisioner" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -28,6 +29,7 @@
 				<fieldset class="form">
 					<strong>Tahun Akademik : </strong>
 					<g:datePicker name="tahunAkademik" precision="year" value="${new Date()}" default="none"  relativeYears="[-10..10]" default="${new Date()}" />
+					<g:select id="dosen" name="dosen" from="${sijad.Dosen.list()}" optionKey="id" value="${quisionerInstance?.dosen?.id}" class="many-to-one"/>
 					<g:submitButton name="cek" class="save" value="Buka" />
 				</fieldset>
 			</g:form>
