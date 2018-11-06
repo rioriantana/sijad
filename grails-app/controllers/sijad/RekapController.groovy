@@ -55,11 +55,8 @@ class RekapController {
         def tanggalAkhir = tanggalAwal + 365
         //def rekap = Quisioner.findAllByTanggalBetween(tanggalAwal, tanggalAkhir)
         def rekap = Quisioner.createCriteria()
-        if (params.dosen != '') {
-            def dosenInstance = Dosen.get(params.dosen)
-                def result = rekap.list{
+        def result = rekap.list{
                     projections{
-                        eq('dosen', dosenInstance)
                         between("tanggal", tanggalAwal, tanggalAkhir)
                         count() 
                         groupProperty('dosen')
@@ -86,10 +83,11 @@ class RekapController {
                         avg('p20')
                     }
             }
-        }
-        else{
-            def result = rekap.list{
+        if (params.dosen != '') {
+            def dosenInstance = Dosen.get(params.dosen)
+                    result = rekap.list{
                     projections{
+                        eq('dosen', dosenInstance)
                         between("tanggal", tanggalAwal, tanggalAkhir)
                         count() 
                         groupProperty('dosen')
